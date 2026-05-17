@@ -1,3 +1,5 @@
+import pandas as pd
+
 def norm(x):
     """
     pulisce la stringa passata in argomento, effettuando:
