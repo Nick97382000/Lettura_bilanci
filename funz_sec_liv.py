@@ -1,4 +1,4 @@
-from funzioni_base import norm 
+from funzioni_base import * 
 
 def match_testo(testo, include, exclude):
     """
