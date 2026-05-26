@@ -60,3 +60,57 @@ def summary_tabella(tabella, labels_dict):
 
     return pd.DataFrame.from_dict(righe, orient="index", columns=date)
 
+import pdfplumber
+
+def trova_tabella_bilancio(pdf_path, keywords):
+    """
+    trova e restituisce la tabella bilancio OIC, in argomento:
+    - pdf_path: indica il percorso del file pdf da analizzare
+    - keywords indica le parole chiave che identificano la prima pagina del bilancio
+    """
+    #leggo il pdf ed estraggo le tabelle; per ogni tabella la converto in un unica
+    #stringa e controllo che le keywords siano presenti al suo interno; in caso
+    #positivo salvo l'indice della pagina di riferimento.
+    with pdfplumber.open(pdf_path) as pdf:
+        pagina_start = None
+        for i, page in enumerate(pdf.pages):
+            tables = page.extract_tables()
+            for ii, t in enumerate(tables):
+                testo = " ".join(
+                    str(cell).lower()
+                    for row in t
+                    for cell in row
+                    if cell
+                )
+                if all(kw in testo for kw in keywords):
+                    pagina_start = i
+                    break;
+            if pagina_start is not None:
+                break
+
+        if pagina_start is None:
+            return None
+
+        #legge a partire dalla tabella iniziale di riferimento, continua a leggere
+        #finchè sono presenti tabelle nelle pagine successive, unendo tutto il
+        #contenuto in un dataframe pandas
+        tutte_le_righe = []
+        intestazione = None
+
+        for i in range (pagina_start, len(pdf.pages)):
+                tables = pdf.pages[i].extract_tables()
+
+                if not tables:
+                    break
+
+                for t in tables:
+                    righe = [r for r in t if any(c for c in r)]
+                    tutte_le_righe.extend(righe)
+
+        if tutte_le_righe:
+            n_colonne = max(len(r) for r in tutte_le_righe)
+            tutte_le_righe = [r + [None]*(n_colonne - len(r)) for r in tutte_le_righe]
+
+            df = pd.DataFrame(tutte_le_righe)
+            return df
+    return None
