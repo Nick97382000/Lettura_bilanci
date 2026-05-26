@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import config as cf
-import funz_sec_liv
+from funz_sec_liv import *
 
 def summary_tabella(tabella, labels_dict):
     """
