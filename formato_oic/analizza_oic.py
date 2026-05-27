@@ -1,7 +1,7 @@
-from utilities.clear_check_oic import * 
+from formato_oic.utilities.clear_check_oic import * 
 import pandas as pd
 import numpy as np
-import config as cf
+import formato_oic.config as cf
 
 def calcola_passivita_correnti(tabella, col_label, cols_valori,
                                iniz_deb, fin_deb, alias_correnti):
