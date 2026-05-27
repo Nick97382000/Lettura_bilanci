@@ -55,5 +55,10 @@ def pulisci_numero(x):
     except:
         return np.nan
 
-
-
+def match_testo(testo, include, exclude):
+    """
+    verifica che nel testo passato in argomento sia presente la stringa di include
+    e non sia presente nessuna delle stringhe passate in exclude (include è singola)
+    """
+    testo = norm(testo)
+    return include.lower() in testo and not any(e.lower() in testo for e in exclude)
