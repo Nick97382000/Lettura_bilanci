@@ -1,13 +1,4 @@
-from funzioni_base import * 
-
-def match_testo(testo, include, exclude):
-    """
-    verifica che nel testo passato in argomento sia presente la stringa di include
-    e non sia presente nessuna delle stringhe passate in exclude (include è singola)
-    """
-    testo = norm(testo)
-    return include.lower() in testo and not any(e.lower() in testo for e in exclude)
-
+from clear_check_oic import * 
 
 def calcola_passivita_correnti(tabella, col_label, cols_valori,
                                iniz_deb, fin_deb, alias_correnti):
@@ -16,7 +7,7 @@ def calcola_passivita_correnti(tabella, col_label, cols_valori,
     - tabella: un DataFrame pandas.
     - col_label: indice della colonna che contiene le etichette testuali.
     - cols_valori: lista delle colonne che contengono i valori numerici da sommare.
-    - eventuale inizio e fine del blocco debiti e alias
+    - inizio e fine del blocco debiti e alias
 
     l'algoritmo effettua i seguenti passaggi:
     - prende la colonna delle etichette e normalizza il testo
