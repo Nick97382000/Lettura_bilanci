@@ -3,6 +3,20 @@ import pandas as pd
 import re
 import fitz
 
+# New class to hold content string and its original DataFrame chunk
+import pandas as pd
+
+class LeafContent:
+    def __init__(self, content_string, df_chunk):
+        self.content_string = content_string
+        self.df_chunk = df_chunk
+
+    def __len__(self):
+        return len(self.content_string)
+
+    def __str__(self):
+        return self.content_string
+
 def clean_page_numbers_from_title(title_text):
     pattern = r'\b(pag\.?|page)\s*\d+\s*(di|of)\s*\d+\b'
     cleaned_title = re.sub(pattern, '', title_text, flags=re.IGNORECASE).strip()
