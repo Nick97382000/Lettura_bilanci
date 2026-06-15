@@ -7,7 +7,8 @@ def install_python_packages():
         "pdf2image",
         "pytesseract",
         "pandas",
-        "pillow"
+        "pillow",
+        "PyMuPDF"
     ]
     for package in packages:
         try:
