@@ -15,13 +15,13 @@ def make_serializable(data):
         return data.content_string
     return data
 
-output_filename = os.path.basename(sample_pdf_path).replace('.pdf', '_clustered_output.json')
-output_path = os.path.join('Lettura_bilanci/output', output_filename)
+def save_json(input_pdf_path, final_clustered_output
+    output_filename = os.path.basename(input_pdf_path).replace('.pdf', '_clustered_output.json')
+    output_path = os.path.join('Lettura_bilanci/output', output_filename)
 
-# Preparazione dei dati
-serializable_output = make_serializable(final_clustered_output)
-
-with open(output_path, 'w', encoding='utf-8') as f:
-    json.dump(serializable_output, f, ensure_ascii=False, indent=4)
-
-print(f"Clustered output salvato con successo in: {output_path}")
+    # Preparazione dei dati
+    serializable_output = make_serializable(final_clustered_output)
+    
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(serializable_output, f, ensure_ascii=False, indent=4)
+    return 
