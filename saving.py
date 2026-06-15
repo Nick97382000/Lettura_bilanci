@@ -2,11 +2,6 @@
 import json
 import os
 
-output_dir = 'Lettura_bilanci/output'
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-    print(f"Created directory: {output_dir}")
-
 # Funzione per rendere il dizionario serializzabile (converte LeafContent in stringa)
 def make_serializable(data):
     if isinstance(data, dict):
@@ -15,7 +10,10 @@ def make_serializable(data):
         return data.content_string
     return data
 
-def save_json(input_pdf_path, final_clustered_output
+def save_json(input_pdf_path, output_dir, final_clustered_output)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        print(f"Created directory: {output_dir}")
     output_filename = os.path.basename(input_pdf_path).replace('.pdf', '_clustered_output.json')
     output_path = os.path.join('Lettura_bilanci/output', output_filename)
 
