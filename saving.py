@@ -10,7 +10,7 @@ def make_serializable(data):
         return data.content_string
     return data
 
-def save_json(input_pdf_path, output_dir, final_clustered_output)
+def save_json(input_pdf_path, output_dir, final_clustered_output):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         print(f"Created directory: {output_dir}")
