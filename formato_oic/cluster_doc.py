@@ -127,6 +127,98 @@ def _cluster_text_elements_by_font(df_to_cluster, median_body_font_size, title_m
          clusters.append({'title': curr_title, 'df_slice': pd.DataFrame(curr_rows).reset_index(drop=True)})
     return clusters
 
+def _subsection_content_length(subsection):
+    return len(" ".join(subsection['df_slice']['text'].astype(str)))
+
+
+def _merge_two_clusters(first, second):
+    if first['title'].endswith('Initial Content') and second['title'].endswith('Initial Content'):
+        title = first['title']
+    elif first['title'].endswith('Initial Content'):
+        title = second['title']
+    elif second['title'].endswith('Initial Content'):
+        title = first['title']
+    else:
+        title = f"{first['title']} / {second['title']}"
+
+    return {
+        'title': title,
+        'df_slice': pd.concat([first['df_slice'], second['df_slice']], ignore_index=True)
+    }
+
+
+def _merge_short_subsections(subsections, min_len=500):
+    if not subsections:
+        return []
+
+    merged_sections = list(subsections)
+    while True:
+        changed = False
+        normalized = []
+        i = 0
+        while i < len(merged_sections):
+            current = merged_sections[i]
+            current_len = _subsection_content_length(current)
+
+            if current_len >= min_len or len(merged_sections) == 1:
+                normalized.append(current)
+                i += 1
+                continue
+
+            if i < len(merged_sections) - 1:
+                merged_item = _merge_two_clusters(current, merged_sections[i + 1])
+                merged_sections[i + 1] = merged_item
+                changed = True
+                i += 1
+            elif normalized:
+                merged_item = _merge_two_clusters(normalized.pop(), current)
+                normalized.append(merged_item)
+                changed = True
+                i += 1
+            else:
+                normalized.append(current)
+                i += 1
+
+        merged_sections = normalized
+        if not changed:
+            break
+
+    return merged_sections
+
+
+def _merge_small_single_sub_main_sections(main_sections, min_len=500):
+    if not main_sections:
+        return []
+
+    normalized = []
+    i = 0
+    while i < len(main_sections):
+        current = main_sections[i]
+        if len(current['subs']) == 1 and _subsection_content_length(current['subs'][0]) < min_len and len(main_sections) > 1:
+            if normalized:
+                prev_main = normalized.pop()
+                normalized.append({
+                    'title': f"{prev_main['title']} / {current['title']}",
+                    'subs': prev_main['subs'] + current['subs']
+                })
+                i += 1
+            elif i < len(main_sections) - 1:
+                next_main = main_sections[i + 1]
+                normalized.append({
+                    'title': f"{current['title']} / {next_main['title']}",
+                    'subs': current['subs'] + next_main['subs']
+                })
+                i += 2
+            else:
+                normalized.append(current)
+                i += 1
+        else:
+            normalized.append(current)
+            i += 1
+
+    return normalized
+
+
 def merge_and_split_subsections(subsections, min_len=2000, max_len=8000, median_font=11):
     if not subsections: return []
     
@@ -172,8 +264,9 @@ def merge_and_split_subsections(subsections, min_len=2000, max_len=8000, median_
             
     return final_list
 
-def process_to_two_levels(text_df, sections_meta, median_font):
-    output = {}
+
+def process_to_two_levels(text_df, sections_meta, median_font, min_subsection_len=500):
+    main_sections = []
     for meta in sections_meta:
         main_title = meta['title']
         chunk = text_df.loc[meta['start_idx']:meta['end_idx']].copy()
@@ -182,11 +275,22 @@ def process_to_two_levels(text_df, sections_meta, median_font):
         clusters = _cluster_text_elements_by_font(chunk, median_font, title_multiplier=1.15)
         # Merge and split within the 2000-8000 range
         processed_subs = merge_and_split_subsections(clusters, min_len=2000, max_len=8000, median_font=median_font)
-        
-        output[main_title] = {}
-        for sub in processed_subs:
+        main_sections.append({'title': main_title, 'subs': processed_subs})
+
+    for main in main_sections:
+        main['subs'] = _merge_short_subsections(main['subs'], min_len=min_subsection_len)
+
+    main_sections = _merge_small_single_sub_main_sections(main_sections, min_len=min_subsection_len)
+
+    for main in main_sections:
+        main['subs'] = _merge_short_subsections(main['subs'], min_len=min_subsection_len)
+
+    output = {}
+    for main in main_sections:
+        output[main['title']] = {}
+        for sub in main['subs']:
             content_str = " ".join(sub['df_slice']['text'].astype(str))
-            output[main_title][sub['title']] = LeafContent(content_str, sub['df_slice'])
+            output[main['title']][sub['title']] = LeafContent(content_str, sub['df_slice'])
     return output
 
 def display_two_levels(data):
