@@ -147,7 +147,7 @@ def _merge_two_clusters(first, second):
     }
 
 
-def _merge_short_subsections(subsections, min_len=500):
+def _merge_short_subsections(subsections, min_len=1000):
     if not subsections:
         return []
 
@@ -186,7 +186,7 @@ def _merge_short_subsections(subsections, min_len=500):
     return merged_sections
 
 
-def _merge_small_single_sub_main_sections(main_sections, min_len=500):
+def _merge_small_single_sub_main_sections(main_sections, min_len=1000):
     if not main_sections:
         return []
 
@@ -265,7 +265,7 @@ def merge_and_split_subsections(subsections, min_len=2000, max_len=8000, median_
     return final_list
 
 
-def process_to_two_levels(text_df, sections_meta, median_font, min_subsection_len=500):
+def process_to_two_levels(text_df, sections_meta, median_font, min_subsection_len=1000):
     main_sections = []
     for meta in sections_meta:
         main_title = meta['title']
