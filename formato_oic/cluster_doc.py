@@ -231,9 +231,8 @@ def process_to_two_levels(text_df, sections_meta, median_font, min_subsection_le
     for main in main_sections:
         output[main['title']] = {}
         for sub in main['subs']:
-            content_str = " ".join(sub['df_slice']['text'].astype(str))
+            # Rimosso il campo 'content' ridondante
             output[main['title']][sub['title']] = {
-                "content": content_str,
                 "components_breakdown": sub['components']
             }
     return output
@@ -242,8 +241,9 @@ def display_two_levels(data):
     for main_t, subs in data.items():
         print(f"\n{'='*60}\nMAIN SECTION: {main_t}\n{'='*60}")
         for sub_t, leaf_dict in subs.items():
-            c_len = len(leaf_dict['content'])
-            print(f"  [SUB-SECTION]: {sub_t} (Total Length: {c_len})")
+            # Calcolo lunghezza totale basandoci sui componenti
+            total_c_len = sum(len(c.get('text', '')) for c in leaf_dict['components_breakdown'])
+            print(f"  [SUB-SECTION]: {sub_t} (Total Length: {total_c_len})")
             if 'components_breakdown' in leaf_dict and len(leaf_dict['components_breakdown']) > 1:
                 print("    --- Components Breakdown ---")
                 for i, comp in enumerate(leaf_dict['components_breakdown']):
