@@ -178,7 +178,7 @@ def _merge_short_subsections(subsections, min_len=1000):
         if not changed: break
     return merged_sections
 
-def merge_and_split_subsections(subsections, min_len=2000, max_len=8000, median_font=11):
+def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_font=11):
     if not subsections: return []
     merged = []
     for item in subsections:
@@ -224,7 +224,7 @@ def process_to_two_levels(text_df, sections_meta, median_font, min_subsection_le
     for meta in sections_meta:
         chunk = text_df.loc[meta['start_idx']:meta['end_idx']].copy()
         clusters = _cluster_text_elements_by_font(chunk, median_font, title_multiplier=1.15)
-        processed_subs = merge_and_split_subsections(clusters, min_len=2000, max_len=8000, median_font=median_font)
+        processed_subs = merge_and_split_subsections(clusters, min_len=1000, max_len=2000, median_font=median_font)
         main_sections.append({'title': meta['title'], 'subs': processed_subs})
     for main in main_sections: main['subs'] = _merge_short_subsections(main['subs'], min_len=min_subsection_len)
     output = {}
