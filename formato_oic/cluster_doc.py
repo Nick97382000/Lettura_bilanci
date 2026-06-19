@@ -16,7 +16,7 @@ class LeafContent:
         return self.content_string
 
 def clean_page_numbers_from_title(title_text):
-    pattern = r'\b(pag\.?|page)\s*\d+\s*(di|of)\s*\d+\b'
+    pattern = r'\b(pag\.?:?|page)\s*\d+\s*(di|of)?\s*\d*\b'
     cleaned_title = re.sub(pattern, '', title_text, flags=re.IGNORECASE).strip()
     cleaned_title = re.sub(r'\s+', ' ', cleaned_title).strip()
     return cleaned_title
@@ -226,13 +226,15 @@ def process_to_two_levels(text_df, sections_meta, median_font, min_subsection_le
         clusters = _cluster_text_elements_by_font(chunk, median_font, title_multiplier=1.15)
         processed_subs = merge_and_split_subsections(clusters, min_len=1000, max_len=2000, median_font=median_font)
         main_sections.append({'title': meta['title'], 'subs': processed_subs})
-    for main in main_sections: main['subs'] = _merge_short_subsections(main['subs'], min_len=min_subsection_len)
+    for main_section in main_sections: main_section['subs'] = _merge_short_subsections(main_section['subs'], min_subsection_len)
     output = {}
-    for main in main_sections:
-        output[main['title']] = {}
-        for sub in main['subs']:
-            # Rimosso il campo 'content' ridondante
-            output[main['title']][sub['title']] = {
+    for main_section in main_sections:
+        main_t = main_section['title']
+        output[main_t] = {}
+        for sub_idx, sub in enumerate(main_section['subs']):
+            output[main_t][f"Sub-section-{sub_idx + 1}"] = {
+                "original_descriptive_title": sub['title'],
+                "llm_section_title": f"Sub-section-{sub_idx + 1} Placeholder",
                 "components_breakdown": sub['components']
             }
     return output
@@ -244,6 +246,9 @@ def display_two_levels(data):
             # Calcolo lunghezza totale basandoci sui componenti
             total_c_len = sum(len(c.get('text', '')) for c in leaf_dict['components_breakdown'])
             print(f"  [SUB-SECTION]: {sub_t} (Total Length: {total_c_len})")
+            # Optionally print original descriptive title if needed for debug
+            if 'original_descriptive_title' in leaf_dict:
+                print(f"    (Original Title: {leaf_dict['original_descriptive_title']})")
             if 'components_breakdown' in leaf_dict and len(leaf_dict['components_breakdown']) > 1:
                 print("    --- Components Breakdown ---")
                 for i, comp in enumerate(leaf_dict['components_breakdown']):
