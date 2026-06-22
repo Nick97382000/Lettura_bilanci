@@ -127,8 +127,54 @@ def _cluster_text_elements_by_font(df_to_cluster, median_body_font_size, title_m
          clusters.append({'title': curr_title, 'df_slice': pd.DataFrame(curr_rows).reset_index(drop=True)})
     return clusters
 
-def merge_and_split_subsections(subsections, min_len=2000, max_len=8000, median_font=11):
+def _split_large_subsection(clusters, parent_title, min_len=1000, max_len=2000):
+    """
+    Divide una sub-section molto grande (> 3000 caratteri) usando i cluster (titoli) come punti di rottura naturali.
+    Tenta di mantenere i risultati nel range min_len-max_len.
+    Se necessario, crea più parti fino a 3 divisioni.
+    """
+    result_parts = []
+    current_part_clusters = []
+    current_part_length = 0
+    part_counter = 1
+    
+    for i, cluster in enumerate(clusters):
+        cluster_len = len(" ".join(cluster['df_slice']['text'].astype(str)))
+        
+        # Se aggiungere questo cluster superherebbe max_len, e abbiamo già almeno min_len:
+        if current_part_length + cluster_len > max_len and current_part_length >= min_len and current_part_clusters:
+            # Salva la parte corrente
+            part_title = f"{parent_title} (Part {part_counter})"
+            if current_part_clusters[0].get('title') and not current_part_clusters[0]['title'].startswith('Initial'):
+                part_title = f"{parent_title} / {current_part_clusters[0]['title']}"
+            
+            part_df = pd.concat([c['df_slice'] for c in current_part_clusters], ignore_index=True)
+            result_parts.append({'title': part_title, 'df_slice': part_df})
+            
+            # Inizia una nuova parte
+            current_part_clusters = [cluster]
+            current_part_length = cluster_len
+            part_counter += 1
+        else:
+            # Aggiungi il cluster alla parte corrente
+            current_part_clusters.append(cluster)
+            current_part_length += cluster_len
+    
+    # Aggiungi l'ultima parte
+    if current_part_clusters:
+        part_title = f"{parent_title} (Part {part_counter})"
+        if current_part_clusters[0].get('title') and not current_part_clusters[0]['title'].startswith('Initial'):
+            part_title = f"{parent_title} / {current_part_clusters[0]['title']}"
+        
+        part_df = pd.concat([c['df_slice'] for c in current_part_clusters], ignore_index=True)
+        result_parts.append({'title': part_title, 'df_slice': part_df})
+    
+    return result_parts if result_parts else [{'title': parent_title, 'df_slice': pd.concat([c['df_slice'] for c in clusters], ignore_index=True)}]
+
+def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_font=11):
     if not subsections: return []
+    
+    max_hard_limit = 3000  # Limite massimo assoluto - oltre questo, split aggressivo è quasi obbligatorio
     
     # 1. Merging Step
     merged = []
@@ -146,7 +192,18 @@ def merge_and_split_subsections(subsections, min_len=2000, max_len=8000, median_
     final_list = []
     for item in merged:
         content_str = " ".join(item['df_slice']['text'].astype(str))
-        if len(content_str) > max_len:
+        
+        # Se supera il limite massimo assoluto (3000 caratteri), fai split aggressivo usando i titoli
+        if len(content_str) > max_hard_limit:
+            internal_clusters = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
+            if len(internal_clusters) > 1:
+                parts = _split_large_subsection(internal_clusters, item['title'], min_len, max_len)
+                final_list.extend(parts)
+            else:
+                # Se non ci sono cluster naturali, prova comunque uno split al punto medio
+                final_list.append(item)
+        # Se è fra max_len (2000) e max_hard_limit (3000), fai split soft usando il punto medio
+        elif len(content_str) > max_len:
             internal_clusters = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
             if len(internal_clusters) > 1:
                 mid_point = len(content_str) / 2
@@ -180,8 +237,8 @@ def process_to_two_levels(text_df, sections_meta, median_font):
         
         # Get sub-candidates
         clusters = _cluster_text_elements_by_font(chunk, median_font, title_multiplier=1.15)
-        # Merge and split within the 2000-8000 range
-        processed_subs = merge_and_split_subsections(clusters, min_len=2000, max_len=8000, median_font=median_font)
+        # Merge and split within the 1000-2000 range
+        processed_subs = merge_and_split_subsections(clusters, min_len=1000, max_len=2000, median_font=median_font)
         
         output[main_title] = {}
         for sub in processed_subs:
