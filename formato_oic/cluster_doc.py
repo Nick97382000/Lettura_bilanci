@@ -178,6 +178,7 @@ def _merge_short_subsections(subsections, min_len=1000):
         if not changed: break
     return merged_sections
 
+<<<<<<< HEAD
 def _split_large_subsection(clusters, parent_title, min_len=1000, max_len=2000):
     """
     Divide una sub-section molto grande (> 3000 caratteri) usando i cluster (titoli) come punti di rottura naturali.
