@@ -2,7 +2,7 @@
     "Nota integrativa al Bilancio di esercizio chiuso al 31-12-2024 Nota integrativa, parte iniziale": {
         "Sub-section-1": {
             "original_descriptive_title": "Principi di redazione / Casi eccezionali ex art. 2423, quinto comma, del Codice Civile / Cambiamenti di principi contabili / Correzione di errori rilevanti CORREZIONE DI ERRORI RILEVANTI / Problematiche di comparabilità e di adattamento (Part 1)",
-            "llm_section_title": "Nota Integrativa al Bilancio 2024",
+            "llm_section_title": "Principi di redazione e valutazione",
             "components_breakdown": [
                 {
                     "title": "Initial Content",
@@ -12,33 +12,33 @@
                 {
                     "title": "PRINCIPI DI REDAZIONE",
                     "text": "Al fine di redigere il bilancio con chiarezza e fornire una rappresentazione veritiera e corretta della situazione patrimoniale e finanziaria e del risultato economico conformemente al disposto dell'articolo 2423 bis del Codice Civile, si è provveduto a: valutare le singole voci secondo prudenza ed in previsione di una normale continuità aziendale; includere i soli utili effettivamente realizzati nel corso dell'esercizio; determinare i proventi ed i costi nel rispetto della competenza temporale, ed indipendentemente dalla loro manifestazione finanziaria; comprendere tutti i rischi e le perdite di competenza, anche se divenuti noti dopo la conclusione dell'esercizio; considerare distintamente, ai fini della relativa valutazione, gli elementi eterogenei inclusi nelle varie voci del bilancio; mantenere immutati i criteri di valutazione adottati rispetto al precedente esercizio. Sono stati altresì rispettati i seguenti postulati di bilancio di cui all’OIC 11 par. 15: a) prudenza; b) prospettiva della continuità aziendale; c) rappresentazione sostanziale; d) competenza; e) costanza nei criteri di valutazione; f) rilevanza; g) comparabilità. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04",
-                    "summary": "Il bilancio è stato redatto con chiarezza e rappresenta veritieramente la situazione patrimoniale e finanziaria dell'azienda. Sono stati applicati i principi di prudenza, continuità aziendale, rappresentazione sostanziale, competenza, costanza nei criteri di valutazione, rilevanza e comparabilità."
+                    "summary": "Il bilancio è stato redatto con prudenza e considerando una normale continuità aziendale. Sono stati inclusi solo gli utili effettivamente realizzati e considerati distintamente gli elementi eterogenei. Sono stati rispettati i postulati di bilancio di prudenza, prospettiva della continuità aziendale e rappresentazione sostanziale."
                 }
             ]
         },
         "Sub-section-2": {
             "original_descriptive_title": "Principi di redazione / Casi eccezionali ex art. 2423, quinto comma, del Codice Civile / Cambiamenti di principi contabili / Correzione di errori rilevanti CORREZIONE DI ERRORI RILEVANTI / Problematiche di comparabilità e di adattamento / Prospettiva della continuità aziendale",
-            "llm_section_title": "Valutazione della continuità aziendale e eventi straordinari",
+            "llm_section_title": "Situazione Finanziaria e Rischi",
             "components_breakdown": [
                 {
                     "title": "Prospettiva della continuità aziendale",
                     "text": "Per quanto concerne tale principio, la valutazione delle voci di bilancio è stata effettuata nella prospettiva della continuità aziendale e quindi tenendo conto del fatto che l’azienda costituisce un complesso economico funzionante, destinato, almeno per un prevedibile arco di tempo futuro (12 mesi dalla data di riferimento di chiusura del bilancio), alla produzione di reddito. La valutazione è stata effettuata nel rispetto dell'articolo 2423-bis del Codice Civile. Nella valutazione prospettica circa il presupposto della continuità aziendale, non sono emerse incertezze.",
-                    "summary": "L'azienda è stata valutata nella prospettiva della continuità aziendale, senza emersione di incertezze. La valutazione è stata effettuata nel rispetto dell'articolo 2423-bis del Codice Civile."
+                    "summary": "L'azienda è stata valutata nella prospettiva della continuità aziendale senza emersione di incertezze. La valutazione è stata effettuata nel rispetto dell'articolo 2423-bis del Codice Civile."
                 },
                 {
                     "title": "Riflessi del conflitto Russo-Ucraino e della crisi Medio Orientale",
                     "text": "Nel periodo di riferimento il quadro economico-politico è stato ancora connotato da una significativa instabilità, attribuibile al perdurare del conflitto russo/ucraino e del conflitto nell'area Medio Orientale. Questi fattori, tuttavia, non hanno portato particolari conseguenze sull’andamento della Società",
-                    "summary": "Il conflitto russo-ucraino e la crisi Medio Orientale hanno causato instabilità, ma non hanno portato conseguenze significative sull'andamento dell'azienda."
+                    "summary": "Il conflitto russo/ucraino e la crisi Medio Orientale hanno causato instabilità economica, ma non hanno avuto conseguenze sull'andamento dell'azienda."
                 },
                 {
                     "title": "CASI ECCEZIONALI EX ART. 2423, QUINTO COMMA DEL CODICE CIVILE",
                     "text": "Non si sono verificati eventi eccezionali che abbiano reso necessario il ricorso a deroghe di cui all’art. 2423, quinto comma del Codice Civile.",
-                    "summary": "Non si sono verificati eventi eccezionali che abbiano reso necessario il ricorso a deroghe di cui all’art. 2423, quinto comma del Codice Civile."
+                    "summary": "Non sono stati verificati eventi eccezionali che abbiano reso necessario il ricorso a deroghe di cui all’art. 2423, quinto comma del Codice Civile."
                 },
                 {
                     "title": "CAMBIAMENTI DI PRINCIPI CONTABILI",
                     "text": "Non si sono verificati cambiamenti di principi contabili nell’esercizio. Non sono emersi nell’esercizio errori rilevanti commessi in esercizi precedenti.",
-                    "summary": "Non si sono verificati cambiamenti di principi contabili nell’esercizio. Non sono emersi errori rilevanti commessi in esercizi precedenti."
+                    "summary": "Non sono stati verificati cambiamenti di principi contabili nell’esercizio e non sono emersi errori rilevanti commessi in esercizi precedenti."
                 },
                 {
                     "title": "PROBLEMATICHE DI COMPARABILITÀ E ADATTAMENTO",
@@ -49,7 +49,7 @@
         },
         "Sub-section-3": {
             "original_descriptive_title": "Criteri di valutazione applicati CRITERI DI VALUTAZIONE APPLICATI / Altre informazioni ALTRE INFORMAZIONI (Part 1)",
-            "llm_section_title": "Rischi e prospettive",
+            "llm_section_title": "Informazioni qualitative di bilancio",
             "components_breakdown": [
                 {
                     "title": "Initial Content",
@@ -59,7 +59,7 @@
                 {
                     "title": "Immobilizzazioni immateriali",
                     "text": "Le immobilizzazioni immateriali sono iscritte, nel limite del valore recuperabile, al costo di acquisto o di produzione interna, inclusi tutti gli oneri accessori di diretta imputazione, e sono sistematicamente ammortizzate in quote costanti in relazione alla residua possibilità di utilizzazione del bene e si riferiscono a costi aventi utilità pluriennale o a beni immateriali rappresentati da diritti giuridicamente tutelati, esposti nell’attivo di bilancio al netto dei relativi ammortamenti. Le immobilizzazioni immateriali non sono state né svalutate, né sono state apportate modifiche nei criteri di ammortamento sistematico delle stesse, né nei coefficienti applicati, rispetto all’esercizio precedente. Si ricorda che nell'esercizio 2020 si è provveduto alla rivalutazione dei Marchi ai sensi e per gli effetti della L.N. 126 /2020 modificata dalla L.N. 148/2020. Nel proseguo della presente Nota Integrativa sono indicate le informazioni richieste ex art. 2427, c. 1, nn.1 e 2 del C.C. . I piani di ammortamento di tali immobilizzazioni sono stati predisposti tenendo conto dell’arco temporale entro cui si stima essi producano utilità, secondo lo schema sotto riportato. Voce Aliquota di ammortamento . Avviamento 6,66 % . Spese su immobili di terzi 20,00 % . Manutenzione Straordinaria beni mobili di terzi 20,00 % . Diritti di brevetto industriale e di utilizzazione delle opere dell’ingegno 33,33 % . Concessioni, diritti e Marchi 20,00 % (*) . Software 33,33 % . Altre 20,00 % (*) ovvero per la durata di utilizzo del diritto. Per i marchi la vita utile è stata identificata in anni 15.",
-                    "summary": "Le immobilizzazioni immateriali sono ammortizzate in quote costanti e si riferiscono a costi aventi utilità pluriennale o a beni immateriali rappresentati da diritti giuridicamente tutelati."
+                    "summary": "Le immobilizzazioni immateriali sono ammortizzate in quote costanti e non sono state svalutate. I piani di ammortamento sono stati predisposti tenendo conto dell'arco temporale entro cui si stima che essi producano utilità."
                 }
             ]
         },
@@ -70,13 +70,13 @@
                 {
                     "title": "Immobilizzazioni materiali",
                     "text": "Le immobilizzazioni materiali sono rilevate alla data in cui avviene il trasferimento dei rischi e dei benefici connessi ai beni acquisiti e sono iscritte, nel limite del valore recuperabile, al costo di acquisto o di produzione al netto dei relativi fondi di ammortamento, inclusi tutti i costi e gli oneri accessori di diretta imputazione, dei costi indiretti inerenti la produzione interna, e fino al momento nel quale il bene può essere utilizzato. I costi sostenuti sui beni esistenti a fini di ampliamento, ammodernamento e miglioramento degli elementi strutturali, nonché quelli sostenuti per aumentarne la rispondenza agli scopi per cui erano stati acquisiti, e le manutenzioni straordinarie in conformità con quanto disposto dall’OIC 16 ai par. da 49 a 53, sono stati capitalizzati solo in presenza di un aumento significativo e misurabile della capacità produttiva o della vita utile. Il costo delle immobilizzazioni la cui utilizzazione è limitata nel tempo è sistematicamente ammortizzato in ogni esercizio sulla base di aliquote economico-tecniche determinate in relazione alla residua possibilità di utilizzazione. Tutti i cespiti, compresi quelli temporaneamente non utilizzati, sono stati ammortizzati, ad eccezione di quelli la cui utilità non si esaurisce, e che sono costituiti da fabbricati non strumentali. Sulla base di quanto disposto dall'OIC 16 par. 60, nel caso in cui il valore dei fabbricati incorpori anche il valore dei terreni sui quali essi insistono si è proceduto allo scorporo del valore del fabbricato. L’ammortamento decorre dal momento in cui i beni sono disponibili e pronti per l’uso. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Sono state applicate le aliquote che rispecchiano il risultato dei piani di ammortamento tecnici, confermate dalle realtà aziendali e ridotte del 50% per le acquisizioni nell'esercizio, in quanto esistono per queste ultime le condizioni previste dall’OIC 16 par. 61. I piani di ammortamento, in conformità dell’OIC 16 par.70 sono rivisti in caso di modifica della residua possibilità di utilizzazione. Non sono state effettuate rivalutazioni delle immobilizzazioni materiali. Non si sono verificati casi che richiedessero una svalutazione delle immobilizzazioni materiali e non sono state apportate modifiche nei criteri di ammortamento rispetto all’esercizio precedente. Le aliquote concretamente applicate sono esposte nel prospetto che segue: Voce Aliquota di ammortamento . Costruzioni leggere (strutture apribili) 10,00 % . Impianti generici 7,50 % . Impianti specifici 12,50 % . Attrezzatura varia e minuta 40,00 % . Mobili e macchine ordinarie d’ufficio 12,00 % . Macchine ufficio elettriche/elettroniche 20,00 % . Autovetture 25,00 % . Mezzi di trasporto interni 20,00 % . Autoveicoli da trasporto 20,00 %",
-                    "summary": "Le immobilizzazioni materiali sono state ammortizzate utilizzando aliquote economico-tecniche determinate in relazione alla residua possibilità di utilizzazione. Non sono state effettuate rivalutazioni delle immobilizzazioni materiali e non sono state apportate modifiche nei criteri di ammortamento rispetto all’esercizio precedente."
+                    "summary": "Le immobilizzazioni materiali sono state capitalizzate nel limite del valore recuperabile e ammortizzate in base a aliquote economico-tecniche determinate in relazione alla residua possibilità di utilizzazione. Non sono state effettuate rivalutazioni o svalutazioni delle immobilizzazioni materiali."
                 }
             ]
         },
         "Sub-section-5": {
             "original_descriptive_title": "Criteri di valutazione applicati CRITERI DI VALUTAZIONE APPLICATI / Altre informazioni ALTRE INFORMAZIONI / Partecipazioni",
-            "llm_section_title": "Valutazione e classificazione degli investimenti",
+            "llm_section_title": "Valutazione e gestione di attività finanziarie",
             "components_breakdown": [
                 {
                     "title": "Partecipazioni",
@@ -86,7 +86,7 @@
                 {
                     "title": "Partecipazioni immobilizzate",
                     "text": "Le partecipazioni immobilizzate, quotate e non quotate, sono state valutate attribuendo a ciascuna partecipazione il costo specificamente sostenuto. Ai sensi dell’art. 2426, punto 3 del Codice Civile, in presenza di perdite durevoli di valore, definite e determinate sulla base dell’OIC 21 par. da 31 a 41, si è proceduto alla rettifica del costo .",
-                    "summary": "Le partecipazioni immobilizzate sono state valutate attribuendo a ciascuna partecipazione il costo specificamente sostenuto. Sono state anche rettificate in presenza di perdite durevoli di valore."
+                    "summary": "Le partecipazioni immobilizzate sono state valutate attribuendo a ciascuna partecipazione il costo specificamente sostenuto. Si è proceduto alla rettifica del costo in presenza di perdite durevoli di valore."
                 },
                 {
                     "title": "Partecipazioni non immobilizzate",
@@ -101,76 +101,76 @@
                 {
                     "title": "Titoli non immobilizzati",
                     "text": "v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 I titoli che non costituiscono immobilizzazioni sono iscritti al minor valore tra il costo di acquisto e il valore di presunto realizzo desunto dall'andamento del mercato. La società non applica il criterio del costo ammortizzato e pertanto i titoli non immobilizzati acquistati negli esercizi precedenti continuano ad essere iscritti al precedente principio contabile. Anche nell'esercizio 2023 la Società si è avvalsa della facoltà già concessa dall'articolo 45, comma 3-octies, del decreto “Semplificazioni fiscali” (D.L. n. 73/2022) di non svalutare i titoli iscritti nell’attivo circolante.",
-                    "summary": "I titoli non costituiscono immobilizzazioni e sono iscritti al minor valore tra il costo di acquisto e il valore di presunto realizzo desunto dall'andamento del mercato. La società non applica il criterio del costo ammortizzato e pertanto i titoli non immobilizzati continuano ad essere iscritti al precedente principio contabile."
+                    "summary": "I titoli non costituiscono immobilizzazioni e sono iscritti al minor valore tra il costo di acquisto e il valore di presunto realizzo desunto dall'andamento del mercato. La società non applica il criterio del costo ammortizzato e non svaluta i titoli iscritti nell’attivo circolante."
                 }
             ]
         },
         "Sub-section-6": {
             "original_descriptive_title": "Criteri di valutazione applicati CRITERI DI VALUTAZIONE APPLICATI / Altre informazioni ALTRE INFORMAZIONI / Rimanenze",
-            "llm_section_title": "Politiche gestionali e valutazione rimanenze",
+            "llm_section_title": "Politiche gestionali e valutazione delle rimanenze",
             "components_breakdown": [
                 {
                     "title": "Rimanenze",
                     "text": "Le rimanenze sono rilevate alla data in cui avviene il trasferimento dei rischi e dei benefici connessi ai beni acquisiti e sono iscritte al minor valore tra il costo di acquisto, comprensivo di tutti i costi e oneri accessori di diretta imputazione e dei costi indiretti inerenti alla produzione interna, ed il presumibile valore di realizzo desumibile dall'andamento del mercato. L’eventuale svalutazione operata sulle giacenze di articoli obsoleti o a lento rigiro viene eliminata negli esercizi successivi se vengono meno i motivi della stessa. La configurazione di costo adottata per le materie prime e i prodotti finiti è quella denominata costo medio ponderato. I prodotti in corso di lavorazione sono valutati in proporzione alla fase di avanzamento dei lavori. Ai sensi e per gli effetti dell’art. 2426, comma 1, n. 10 del Codice Civile si dichiara che i valori ottenuti dall’applicazione dei metodi sopra indicati non differiscono in misura apprezzabile dai costi correnti alla chiusura dell’esercizio.",
-                    "summary": "Le rimanenze sono valutate al minor valore tra costo di acquisto e presumibile valore di realizzo. La configurazione di costo adottata è il costo medio ponderato. I prodotti in corso di lavorazione sono valutati in proporzione alla fase di avanzamento dei lavori."
+                    "summary": "Le rimanenze sono valutate al minor valore tra il costo di acquisto e il presumibile valore di realizzo. La configurazione di costo adottata è il costo medio ponderato. I prodotti in corso di lavorazione sono valutati in proporzione alla fase di avanzamento dei lavori."
                 }
             ]
         },
         "Sub-section-7": {
             "original_descriptive_title": "Criteri di valutazione applicati CRITERI DI VALUTAZIONE APPLICATI / Altre informazioni ALTRE INFORMAZIONI / Crediti",
-            "llm_section_title": "Crediti",
+            "llm_section_title": "Gestione Crediti",
             "components_breakdown": [
                 {
                     "title": "Crediti",
                     "text": "I crediti sono classificati nell’attivo immobilizzato ovvero nell’attivo circolante sulla base della destinazione / origine degli stessi rispetto all’attività ordinaria, e sono iscritti al valore di presunto realizzo. La suddivisione degli importi esigibili entro e oltre l’esercizio è effettuata con riferimento alla scadenza contrattuale o legale, tenendo anche conto di fatti ed eventi che possono determinare una modifica della scadenza originaria, della realistica capacità del debitore di adempiere all’obbligazione nei termini contrattuali e dell’orizzonte temporale in cui, ragionevolmente, si ritiene di poter esigere il credito. I crediti ai sensi dell’art. 2426, comma 1 numero 8 del Codice Civile sono rilevati secondo il criterio del costo ammortizzato, ad eccezione dei crediti per i quali gli effetti dell’applicazione del costo ammortizzato, ai sensi dell’art. 2423 comma 4 del Codice Civile, sono irrilevanti (scadenza inferiore ai 12 mesi). Per il principio di rilevanza già richiamato, non sono stati attualizzati i crediti nel caso in cui il tasso d’interesse desumibile dalle condizioni contrattuali non sia significativamente diverso dal tasso di interesse di mercato. Si è inoltre tenuto conto del ‘fattore temporale’ di cui all’art. 2426, comma 1 numero 8, del Codice Civile, operando l’ attualizzazione dei crediti scadenti oltre i 12 mesi nel caso di differenza significativa tra tasso di interesse effettivo e tasso di mercato. I crediti per i quali non è stato applicato il criterio del costo ammortizzato sono stati rilevati al valore di presumibile realizzo. I crediti, indipendentemente dall’applicazione o meno del costo ammortizzato, sono rappresentati in bilancio al netto dell’iscrizione di un fondo svalutazione a copertura dei crediti ritenuti inesigibili, nonché del generico rischio relativo v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 ai rimanenti crediti, basato su stime effettuate sulla base dell’esperienza passata, dell’andamento degli indici di anzianità dei crediti scaduti, nonché sui fatti intervenuti dopo la chiusura dell’esercizio che hanno riflessi sui valori alla data del bilancio. Non sussistono crediti assistiti da garanzie.",
-                    "summary": "I crediti sono classificati in attivo immobilizzato o circolante in base alla destinazione/origine. Sono iscritti al valore di presunto realizzo e attualizzati con riferimento alla scadenza contrattuale o legale. Non sono stati attualizzati i crediti con tasso d'interesse desumibile dalle condizioni contrattuali non significativamente diverso dal tasso di interesse di mercato."
+                    "summary": "I crediti sono classificati in base alla destinazione e origine rispetto all'attività ordinaria e sono iscritti al valore di presunto realizzo. Sono stati attualizzati i crediti scadenti oltre 12 mesi con differenza significativa tra tasso di interesse effettivo e tasso di mercato."
                 }
             ]
         },
         "Sub-section-8": {
             "original_descriptive_title": "Criteri di valutazione applicati CRITERI DI VALUTAZIONE APPLICATI / Altre informazioni ALTRE INFORMAZIONI / Crediti tributari e attività per imposte anticipate",
-            "llm_section_title": "Rischi e Prospettive Finanziarie",
+            "llm_section_title": "Fondi e disponibilità",
             "components_breakdown": [
                 {
                     "title": "Crediti tributari e attività per imposte anticipate",
                     "text": "La voce ‘Crediti tributari’ accoglie gli importi certi e determinati derivanti da crediti per i quali sia sorto un diritto di realizzo tramite rimborso o in compensazione. La voce ‘Imposte anticipate’ accoglie le attività per imposte anticipate determinate in base alle differenze temporanee deducibili o al riporto a nuovo delle perdite fiscali, applicando l’aliquota stimata in vigore al momento in cui si ritiene tali differenze si riverseranno. Le attività per imposte anticipate sono rilevate, nel rispetto del principio della prudenza, solo quando vi è la ragionevole certezza del loro futuro recupero sulla base di piani previsionali elaborati con le informazioni disponibili.",
-                    "summary": "Gli importi certi e determinati derivanti da crediti per i quali sia sorto un diritto di realizzo tramite rimborso o in compensazione sono rilevati con ragionevole certezza del loro futuro recupero."
+                    "summary": "Gli importi certi e determinati derivanti da crediti per i quali sia sorto un diritto di realizzo tramite rimborso o in compensazione sono rilevati solo quando vi è la ragionevole certezza del loro futuro recupero."
                 },
                 {
                     "title": "Disponibilità liquide",
                     "text": "Le disponibilità liquide sono esposte al loro valore nominale.",
-                    "summary": "Summarization failed or empty."
+                    "summary": "Le disponibilità liquide sono esposte al loro valore nominale."
                 },
                 {
                     "title": "Ratei e risconti",
                     "text": "I ratei e i risconti sono stati iscritti sulla base del principio della competenza economico temporale e contengono i ricavi / costi di competenza dell’esercizio ed esigibili in esercizi successivi e i ricavi / costi sostenuti entro la chiusura dell’esercizio, ma di competenza di esercizi successivi",
-                    "summary": "Summarization failed or empty."
+                    "summary": "I ratei e i risconti sono stati iscritti sulla base del principio della competenza economico temporale e contengono i ricavi / costi di competenza dell’esercizio ed esigibili in esercizi successivi e i ricavi / costi sostenuti entro la chiusura dell’esercizio, ma di competenza di esercizi successivi"
                 },
                 {
                     "title": "Fondi per rischi ed oneri",
                     "text": "I fondi per rischi rappresentano le passività connesse a situazioni esistenti alla data di bilancio, ma il cui verificarsi è solo probabile. I fondi per oneri rappresentano passività certe, correlate a componenti negativi di reddito di competenza dell’ esercizio, ma che avranno manifestazione numeraria nell’esercizio successivo. Il processo di stima è operato e/o adeguato alla data di chiusura del bilancio sulla base dell’esperienza passata e di ogni elemento utile a disposizione. In conformità con l’OIC 31 par.19, dovendo prevalere il criterio di classificazione per natura dei costi, gli accantonamenti ai fondi rischi e oneri sono iscritti tra le voci dell’attività gestionale a cui si riferisce l’operazione (caratteristica, accessoria o finanziaria).",
-                    "summary": "I fondi per rischi rappresentano passività connesse a situazioni esistenti alla data di bilancio, ma il cui verificarsi è solo probabile. I fondi per oneri rappresentano passività certe, correlate a componenti negativi di reddito di competenza dell’esercizio, ma che avranno manifestazione numeraria nell’esercizio successivo."
+                    "summary": "I fondi per rischi rappresentano le passività connesse a situazioni esistenti alla data di bilancio, ma il cui verificarsi è solo probabile. I fondi per oneri rappresentano passività certe, correlate a componenti negativi di reddito di competenza dell’ esercizio, ma che avranno manifestazione numeraria nell’esercizio successivo."
                 }
             ]
         },
         "Sub-section-9": {
             "original_descriptive_title": "Criteri di valutazione applicati CRITERI DI VALUTAZIONE APPLICATI / Altre informazioni ALTRE INFORMAZIONI / Fondi per trattamento di quiescenza e obblighi simili",
-            "llm_section_title": "Passività e obblighi",
+            "llm_section_title": "Rischi e passività",
             "components_breakdown": [
                 {
                     "title": "Fondi per trattamento di quiescenza e obblighi simili",
                     "text": "Rappresentano le passività connesse agli accantonamenti per i trattamenti previdenziali integrativi e per le indennità una tantum spettanti a lavoratori dipendenti, autonomi e collaboratori, in forza di legge o di contratto, al momento della cessazione del rapporto. L’accantonamento dell’anno è stato determinato, anche in base a stime, in modo da consentire il progressivo adeguamento del relativo fondo alla quota complessivamente maturata alla fine dell’esercizio. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04",
-                    "summary": "L'azienda accantona fondi per trattamenti previdenziali integrativi e indennità una tantum spettanti a lavoratori dipendenti, autonomi e collaboratori. L'accantonamento è stato determinato per consentire il progressivo adeguamento del relativo fondo alla quota complessivamente maturata alla fine dell'esercizio."
+                    "summary": "L'azienda ha accantonato fondi per trattamenti previdenziali integrativi e indennità una tantum per lavoratori dipendenti, autonomi e collaboratori. L'accantonamento è stato determinato per consentire il progressivo adeguamento del relativo fondo alla quota complessivamente maturata."
                 },
                 {
                     "title": "Fondi per imposte, anche differite",
                     "text": "Accoglie le passività per imposte probabili, derivanti da accertamenti non definitivi e contenziosi in corso, e le passività per imposte differite determinate in base alle differenze temporanee imponibili, applicando l’aliquota stimata in vigore al momento in cui si ritiene tali differenze si riverseranno. Il fondo per imposte differite accoglie, ai sensi dell’OIC 25 par. da 53 a 85, anche le imposte differite derivanti da operazioni straordinarie, rivalutazione di attività, riserve in sospensione d’imposta che non sono transitate dal conto economico ovvero dal patrimonio netto.",
-                    "summary": "L'azienda accoglie passività per imposte probabili e differite, derivanti da accertamenti non definitivi e contenziosi in corso. Il fondo per imposte differite accoglie anche le imposte differite derivanti da operazioni straordinarie e rivalutazione di attività."
+                    "summary": "L'azienda ha accantonato fondi per imposte probabili e differite, inclusa la rivalutazione di attività e riserve in sospensione d'imposta. Il fondo per imposte differite accoglie anche le imposte differite derivanti da operazioni straordinarie."
                 },
                 {
                     "title": "Trattamento di fine rapporto di lavoro subordinato",
                     "text": "Il trattamento di fine rapporto di lavoro subordinato è iscritto nel rispetto di quanto previsto dalla normativa vigente e corrisponde all’effettivo impegno della Società nei confronti dei singoli dipendenti alla data di chiusura del bilancio, dedotte le anticipazioni corrisposte.",
-                    "summary": "Il trattamento di fine rapporto di lavoro subordinato è iscritto nel rispetto della normativa vigente e corrisponde all'effettivo impegno della Società nei confronti dei singoli dipendenti alla data di chiusura del bilancio."
+                    "summary": "Il trattamento di fine rapporto di lavoro subordinato è stato iscritto nel rispetto della normativa vigente e corrisponde all'effettivo impegno della Società nei confronti dei singoli dipendenti."
                 }
             ]
         },
@@ -181,7 +181,7 @@
                 {
                     "title": "Debiti",
                     "text": "I debiti ai sensi dell’art. 2426, comma 1 numero 8 del Codice Civile sono rilevati secondo il criterio del costo ammortizzato, ad eccezione dei debiti per i quali gli effetti dell’applicazione del costo ammortizzato, ai sensi dell’art. 2423 comma 4 del Codice Civile, sono irrilevanti (scadenza inferiore ai 12 mesi). Per il principio di rilevanza già richiamato, non sono stati attualizzati i debiti nel caso in cui il tasso d’interesse desumibile dalle condizioni contrattuali non sia significativamente diverso dal tasso di interesse di mercato. Si è inoltre tenuto conto del ‘fattore temporale’ di cui all’art. 2426 comma 1 numero 8 del Codice Civile operando l’ attualizzazione dei debiti scadenti oltre i 12 mesi nel caso di differenza significativa tra tasso di interesse effettivo e tasso di mercato. I debiti per i quali non è stato applicato il criterio del costo ammortizzato sono stati rilevati al valore nominale. La suddivisione degli importi esigibili entro e oltre l’esercizio è effettuata con riferimento alla scadenza contrattuale o legale, tenendo anche conto di fatti ed eventi che possono determinare una modifica della scadenza originaria. I debiti tributari accolgono le passività per imposte certe e determinate, nonché le ritenute operate quale sostituto, e non ancora versate alla data del bilancio, e, ove la compensazione è ammessa, sono iscritti al netto di acconti, ritenute d’acconto e crediti d’imposta.",
-                    "summary": "I debiti sono rilevati secondo il criterio del costo ammortizzato, ad eccezione di quelli con scadenza inferiore ai 12 mesi. I debiti sono attualizzati se il tasso di interesse effettivo è significativamente diverso dal tasso di mercato. I debiti tributari includono imposte certe e determinate, nonché ritenute operate quale sostituto, non ancora versate alla data del bilancio."
+                    "summary": "I debiti sono rilevati secondo il criterio del costo ammortizzato, a meno che gli effetti dell'applicazione di questo criterio siano irrilevanti. Non sono stati attualizzati i debiti se il tasso d'interesse desumibile dalle condizioni contrattuali non è significativamente diverso dal tasso di interesse di mercato."
                 }
             ]
         },
@@ -192,7 +192,7 @@
                 {
                     "title": "Valori in valuta",
                     "text": "Le attività e le passività monetarie in valuta sono iscritte al tasso di cambio a pronti alla data di chiusura dell'esercizio, con imputazione a conto economico dei relativi utili e perdite su cambi. L'eventuale utile netto derivante dall’adeguamento ai cambi è iscritto, per la parte non assorbita dall’eventuale perdita dell’esercizio, in una apposita riserva non distribuibile fino al momento del realizzo. Le attività e le passività in valuta di natura non monetaria sono iscritte al tasso di cambio vigente al momento del loro acquisto, e, ai sensi dell’OIC 26 par. 31, in sede di redazione del bilancio tale costo è confrontato, secondo i principi contabili di riferimento, con il valore recuperabile (immobilizzazioni) o con il valore desumibile dall’andamento del mercato (attivo circolante).",
-                    "summary": "Le attività e le passività in valuta sono iscritte al tasso di cambio a pronti alla data di chiusura dell'esercizio. L'eventuale utile netto derivante dall'adeguamento ai cambi è iscritto in una apposita riserva non distribuibile fino al momento del realizzo."
+                    "summary": "L'azienda iscrive attività e passività monetarie in valuta al tasso di cambio a pronti alla data di chiusura dell'esercizio. Le attività e passività in valuta di natura non monetaria sono iscritte al tasso di cambio vigente al momento del loro acquisto e sono confrontate con il valore recuperabile o con il valore desumibile dall'andamento del mercato."
                 },
                 {
                     "title": "Costi e ricavi",
@@ -203,12 +203,12 @@
         },
         "Sub-section-12": {
             "original_descriptive_title": "Criteri di valutazione applicati CRITERI DI VALUTAZIONE APPLICATI / Altre informazioni ALTRE INFORMAZIONI / Imposte sul reddito",
-            "llm_section_title": "Gestione delle imposte",
+            "llm_section_title": "Informazioni finanziarie",
             "components_breakdown": [
                 {
                     "title": "Imposte sul reddito",
                     "text": "Le imposte sono accantonate secondo il principio di competenza ed includono: gli accantonamenti per imposte liquidate o da liquidare nell’esercizio, determinate secondo le aliquote e le norme vigenti; l’ammontare delle imposte differite o pagate anticipatamente in relazione a differenze temporanee sorte o annullate nell’esercizio; le rettifiche ai saldi delle imposte differite per tenere conto delle variazioni delle aliquote intervenute nel corso dell’ esercizio. L’IRES e IRAP differite ed anticipate sono calcolata sulle differenze temporanee tra i valori delle attività e passività determinati secondo i criteri civilistici ed i corrispondenti valori fiscali. Ai fini della determinazione delle imposte differite attive e passive sono state utilizzate per l'IRES l'aliquota al 24,00% e per l'IRAP l'aliquota al 3,90%. Sono stati osservati i principi e le raccomandazioni pubblicati dall’Organismo Italiano di Contabilità (OIC) al fine di dare una rappresentazione veritiera e corretta della situazione patrimoniale e finanziaria e del risultato economico dell’ esercizio. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04",
-                    "summary": "Le imposte sono accantonate secondo il principio di competenza. Sono state utilizzate aliquote del 24,00% per l'IRES e del 3,90% per l'IRAP. Il bilancio è stato generato automaticamente e conforme alla tassonomia itcc-ci-2018-11-04."
+                    "summary": "Le imposte sono accantonate secondo il principio di competenza. Sono state utilizzate le aliquote del 24,00% per l'IRES e del 3,90% per l'IRAP. È stata osservata la raccomandazione dell'OIC per una rappresentazione veritiera della situazione patrimoniale e finanziaria."
                 }
             ]
         }
@@ -216,7 +216,7 @@
     "Nota integrativa, attivo": {
         "Sub-section-1": {
             "original_descriptive_title": "Nota integrativa, attivo INFORMAZIONI SULLO STATO PATRIMONIALE ATTIVO Immobilizzazioni / Immobilizzazioni immateriali / Movimenti delle immobilizzazioni immateriali",
-            "llm_section_title": "Nota integrativa, attivo",
+            "llm_section_title": "Nota integrativa, attivo INFORMAZIONI SULLO STATO PATRIMONIALE ATTIVO Immobilizzazioni",
             "components_breakdown": [
                 {
                     "title": "Nota integrativa, attivo INFORMAZIONI SULLO STATO PATRIMONIALE ATTIVO Immobilizzazioni",
@@ -226,23 +226,23 @@
                 {
                     "title": "Immobilizzazioni immateriali",
                     "text": "Immobilizzazioni immateriali Le immobilizzazioni immateriali sono pari a € 4.286.506 (€ 4.444.433 nel precedente esercizio).",
-                    "summary": "Le immobilizzazioni immateriali sono pari a € 4.286.506 (€ 4.444.433 nel precedente esercizio). Sono costituite da diritti di brevetto industriale, diritti di utilizzazione delle opere dell'ingegno, concessioni, licenze, marchi e diritti simili, immobilizzazioni immateriali in corso e acconti, altre immobilizzazioni immateriali."
+                    "summary": "Le immobilizzazioni immateriali sono pari a € 4.286.506, con un decremento rispetto al precedente esercizio di € 157.927. La composizione delle immobilizzazioni immateriali è la seguente: diritti di brevetto, concessioni, licenze, marchi e diritti simili, immobilizzazioni immateriali in corso e acconti, altre immobilizzazioni immateriali."
                 },
                 {
                     "title": "Movimenti delle immobilizzazioni immateriali",
                     "text": "La composizione ed i movimenti delle singole voci sono così rappresentati: Diritti di brevetto industriale e diritti di utilizzazione delle opere dell'ingegno Concessioni, licenze, marchi e diritti simili Immobilizzazioni immateriali in corso e acconti Altre immobilizzazioni immateriali Totale immobilizzazioni immateriali Valore di inizio esercizio Costo 67.117 5.117.142 171.117 4.318.212 9.673.588 Ammortamenti (Fondo ammortamento) 50.885 1.257.287 0 3.920.983 5.229.155 Valore di bilancio 16.232 3.859.855 171.117 397.229 4.444.433 Variazioni nell'esercizio Incrementi per acquisizioni 4.567 6.559 144.077 392.931 548.134 Riclassifiche (del valore di bilancio) 0 172.729 (201.279) (20.074) (48.624) Decrementi per alienazioni e dismissioni (del valore di bilancio) 0 0 0 (40.918) (40.918) Ammortamento dell'esercizio 12.845 423.774 0 261.736 698.355 Totale variazioni (8.278) (244.486) (57.202) 152.039 (157.927) Valore di fine esercizio Costo 71.684 5.296.430 113.915 4.691.069 10.173.098 Ammortamenti (Fondo ammortamento) 63.730 1.681.061 0 4.141.801 5.886.592 Valore di bilancio 7.954 3.615.369 113.915 549.268 4.286.506 Qui di seguito sono fornite le seguenti ulteriori informazioni Composizione della voce “Altri immobilizzazioni immateriali” La voce \"Altre immobilizzazioni immateriali\" pari a € 549.268 è così composta: Descrizione Valore di inizio esercizio Variazioni nell'esercizio Valore di fine esercizio v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Spese su immobili di terzi 312.754 145.481 458.235 Manutenzioni straordinarie su beni di terzi 84.475 6.558 91.033 Totale 397.229 152.039 549.268",
-                    "summary": "I movimenti delle immobilizzazioni immateriali sono stati significativi, con un decremento di € 157.927 rispetto al precedente esercizio. La voce \"Altre immobilizzazioni immateriali\" è stata ridotta di € 40.918 a causa di alienazioni e dismissioni."
+                    "summary": "Il valore delle immobilizzazioni immateriali è diminuito di € 157.927 rispetto al precedente esercizio, a causa di decrementi per alienazioni e dismissioni e ammortamento dell'esercizio."
                 }
             ]
         },
         "Sub-section-2": {
             "original_descriptive_title": "Immobilizzazioni materiali",
-            "llm_section_title": "Rivalutazioni e immobilizzazioni materiali",
+            "llm_section_title": "Informazioni sulle immobilizzazioni materiali",
             "components_breakdown": [
                 {
                     "title": "Immobilizzazioni materiali",
                     "text": "Come indicato in altra parte della presente Nota Integrativa la Società, nell'esercizio 2020, ha provveduto alla rivalutazione di specifico marchio all'interno della categoria \"CONCESSIONI,LICENZE,MARCHI E DIRITTI SIMILI\" ex L.N. 126/2020 modificata dalla L.N. 148/2020 per complessivi euro 4.693.625. Tale importo è stato iscritto in contropartita della specifica riserva di Patrimonio Netto per complessivi € 4.552.816,00 oltre che per complessivi € 140.809,00 alla relativa imposta sostitutiva rateizzata e saldata nell'esercizio 2023. La rivalutazione ha effetto anche fiscale. In esito agli effetti contabili previsti dalle diverse facoltà introdotte dall’art. 1, commi 622, 623 e 624 della legge 30 dicembre 2021 n. 234 - legge di Bilancio 2022 - si dà atto che la Società ha optato per mantenere gli effetti fiscali della rivalutazione calcolandone l'ammortamento in 15 anni, ma deducendo fiscalmente il valore del marchio rivalutato in un importo pari a un cinquantesimo senza ricalcolo di alcuna fiscalità differita per effetto del rinnovato orizzonte temporale. Rivalutazioni di legge Rivalutazioni economiche Totale rivalutazioni Costi di impianto e di ampliamento 4.693.625 0 4.693.625 Totale 4.693.625 0 4.693.625 Immobilizzazioni materiali Le immobilizzazioni materiali sono pari a € 12.439.994 (€ 12.961.203 nel precedente esercizio).",
-                    "summary": "Summarization failed or empty."
+                    "summary": "La società ha rivalutato un marchio nel 2020 per 4.693.625€, con effetto fiscale. L'ammortamento del marchio è stato calcolato in 15 anni, con deduzione fiscale del valore del marchio rivalutato."
                 }
             ]
         },
@@ -259,23 +259,23 @@
         },
         "Sub-section-4": {
             "original_descriptive_title": "Movimenti delle immobilizzazioni materiali / Operazioni di locazione finanziaria / Immobilizzazioni finanziarie / Operazioni di locazione finanziaria",
-            "llm_section_title": "Rischi e prospettive finanziarie",
+            "llm_section_title": "Informazioni finanziarie",
             "components_breakdown": [
                 {
                     "title": "Operazioni di locazione finanziaria",
                     "text": "Qui di seguito vengono riportate le informazioni concernenti le operazioni di locazione finanziaria, ai sensi dell'art. 2427, comma 1 numero 22 del Codice Civile: Importo Ammontare complessivo dei beni in locazione finanziaria al termine dell'esercizio 1.506.792 Ammortamenti che sarebbero stati di competenza dell'esercizio 167.568 La tabella sottostante dettaglia le informazioni sopra indicate con riferimento ai singoli contratti in essere: Descrizione Riferimento contratto società di leasing Interessi passivi di competenza Costo storico Fondi ammortamento inizio esercizio Ammortamenti dell'esercizio Valore contabile Contratto LS1667572 Unicredit Leasing 12.221 2.512.200 837.840 167.568 1.506.792 Totale 12.221 2.512.200 837.840 167.568 1.506.792 Si dà atto che il richiamato contratto di leasing si è concluso nel 2024 con il riscatto del cespite sottostante.",
-                    "summary": "Il contratto di leasing si è concluso nel 2024 con il riscatto del cespite sottostante, riducendo i rischi finanziari associati alla locazione finanziaria."
+                    "summary": "L'azienda ha un ammontare complessivo di beni in locazione finanziaria di 1.506.792 €. Il contratto di leasing si è concluso nel 2024 con il riscatto del cespite sottostante."
                 },
                 {
                     "title": "Immobilizzazioni finanziarie",
                     "text": "v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04",
-                    "summary": "Summarization failed or empty."
+                    "summary": null
                 }
             ]
         },
         "Sub-section-5": {
             "original_descriptive_title": "Movimenti di partecipazioni, altri titoli e strumenti finanziari derivati attivi immobilizzati / Dettagli sulle partecipazioni immobilizzate in imprese controllate / Attivo circolante / Partecipazioni, altri titoli e strumenti derivati finanziari attivi",
-            "llm_section_title": "Partecipazioni, altri titoli e strumenti derivati finanziari attivi",
+            "llm_section_title": "Rischi e prospettive delle partecipazioni",
             "components_breakdown": [
                 {
                     "title": "Partecipazioni, altri titoli e strumenti derivati finanziari attivi",
@@ -286,7 +286,7 @@
         },
         "Sub-section-6": {
             "original_descriptive_title": "Movimenti di partecipazioni, altri titoli e strumenti finanziari derivati attivi immobilizzati / Dettagli sulle partecipazioni immobilizzate in imprese controllate / Attivo circolante / ATTIVO CIRCOLANTE",
-            "llm_section_title": "Partecipazioni e strumenti finanziari",
+            "llm_section_title": "Partecipazioni e immobilizzazioni finanziarie",
             "components_breakdown": [
                 {
                     "title": "ATTIVO CIRCOLANTE",
@@ -296,7 +296,7 @@
                 {
                     "title": "Partecipazioni, altri titoli e strumenti derivati finanziari attivi",
                     "text": "Le partecipazioni comprese nelle immobilizzazioni finanziarie sono pari a € 20.432.472 (€ 20.227.472 nel precedente esercizio). Preliminarmente si riporta che in data 28/05/2024, l'assemblea dei soci della controllata Gollinucci S.r.l. ha deliberato di procedere al perfezionamento della operazione straordinaria di fusione per incorporazione inversa della società controllante Riviera Srl (veicolo appositamente costituito nel corso del 2023) nella stessa società Gollinucci Srl con sede legale in Cesena (FC), via Dino Rondani 250, C.F. e numero di iscrizione nel Registro delle imprese di Romagna – Forlì – Cesena – Rimini 0243964046, con capitale sociale di Euro 260.000,00. Ai sensi e per gli effetti dell'art. 2504 bis c.c. la fusione ha avuto effetto dalla data dell'01/08/2024, data dell'ultima iscrizione di cui all'art. 2504 c.c.. La suddetta operazione ha comportato l'annullamento di tutte le quote della incorporanda e assegnazione all'unico socio Volpato Industrie Spa, di tutte le quote della società incorporante, gravate da pegno, già detenute dalla incorporanda prima della fusione. Per espressa indicazione nell'Atto di fusione, gli effetti contabili e fiscali della operazione straordinaria di cui sopra, sono stati retrodatati all'01/01/2024. Ciò premesso la variazione rispetto all'esercizio precedente, di complessivi € 205.000,00 è attribuibile a versamenti in conto capitale, effettuati nei primi mesi dell’esercizio in commento, a favore del veicolo Riviera Srl. . La voce, pertanto, è costituita da: Partecipazioni in imprese controllate: a. una quota pari al 100% del capitale sociale di € 260.000,00 i.v. della società Gollinucci S.r.l , con sede legale in Cesena (FC), via Dino Rondani 250, C.F. e numero di iscrizione nel Registro delle imprese di Romagna – Forlì – Cesena – Rimini 0243964046 con per complessivi € 19.423.459,00; b. quota di maggioranza pari al 76% del capitale sociale di € 25.000,00 i.v. della società ELMA S.r.l , con sede in Susegana (TV), Via Foresto 13, C.F. e P.IVA 04175980269 e numero REA TV-329127 per complessivi € 1.002.714. Degli effetti relativi all'ultimo bilancio approvato al 31 dicembre 2024 delle società si dà atto nelle tabelle infra indicate. Partecipazioni in Altre Imprese: a. quota di partecipazione ai consorzi CONAI, Energia TV, Pesaro Basket per € 6.299,00. La composizione ed i movimenti delle singole voci sono così rappresentati: Partecipazioni in imprese controllate Partecipazioni in altre imprese Totale Partecipazioni Valore di inizio esercizio Costo 20.221.173 6.299 20.227.472 Valore di bilancio 20.221.173 6.299 20.227.472 Variazioni nell'esercizio Incrementi per acquisizioni 205.000 0 205.000 Totale variazioni 205.000 0 205.000 Valore di fine esercizio Costo 20.426.173 6.299 20.432.472 Valore di bilancio 20.426.173 6.299 20.432.472 v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Denominazione Città, se in Italia, o Stato estero Codice fiscale (per imprese italiane) Capitale in euro Utile (Perdita) ultimo esercizio in euro Patrimonio netto in euro Quota posseduta in euro Quota posseduta in % Valore a bilancio o corrispondente credito ELMA SRL ITALIA 04175980269 25.000 617.510 3.071.814 2.334.579 76,00% 1.002.714 GOLLINUCCI SRL ITALIA 02439640406 260.000 642.760 19.350.242 19.350.242 100,00% 19.423.458 Totale 20.426.172",
-                    "summary": "L'azienda ha acquisito una partecipazione del 100% del capitale sociale di Gollinucci S.r.l. e una quota di maggioranza del 76% del capitale sociale di ELMA S.r.l. La fusione con Gollinucci S.r.l. ha comportato l'annullamento di tutte le quote della società incorporata e l'assegnazione di tutte le quote della società incorporante all'unico socio, Volpato Industrie Spa. Gli effetti contabili e fiscali della fusione sono stati retrodatati all'01/01/2024."
+                    "summary": "La società possiede partecipazioni in imprese controllate, tra cui Gollinucci S.r.l. e ELMA S.r.l., con un valore complessivo di € 20.432.472. La società ha anche partecipazioni in altri consorzi e imprese per € 6.299. La composizione delle partecipazioni è stata modificata nel corso dell'esercizio, con l'acquisizione di nuove partecipazioni per € 205.000."
                 }
             ]
         },
@@ -307,13 +307,13 @@
                 {
                     "title": "Rimanenze",
                     "text": "Rimanenze I beni sono rilevati nelle rimanenze nel momento in cui avviene il trasferimento dei rischi e i benefici connessi ai beni acquisiti, e conseguentemente includono i beni esistenti presso i magazzini della Società, ad esclusione di quelli ricevuti da terzi per i quali non è stato acquisito il diritto di proprietà (in visione, in conto lavorazione, in conto deposito), i beni di proprietà presso terzi (in visione, in conto lavorazione, in conto deposito) e i beni in viaggio ove siano stati già trasferiti i rischi e i benefici connessi ai beni acquisiti. Le rimanenze comprese nell'attivo circolante sono pari a € 12.434.595 (€ 10.231.994 nel precedente esercizio). Le giacenze di materie prime e sussidiarie, di semilavorati e di prodotti finiti sono iscritte al netto di un fondo svalutazione magazzino, ritenuto congruo, relativo ad articoli presenti a magazzino a lenta movimentazione o considerati obsoleti in quanto riferiti principalmente a prodotti non più inseriti nel listino di vendita della società la cui movimentazione è la seguente: Fondo svalutazione magazzino 31.12.2023 Utilizzo Accantonamento 31.12.2024 Totale 578.027 (35.287) 120.865 663.606 La composizione ed i movimenti delle singole voci sono così rappresentati: Valore di inizio esercizio Variazione nell'esercizio Valore di fine esercizio Materie prime, sussidiarie e di consumo 3.305.533 884.355 4.189.888 Prodotti in corso di lavorazione e semilavorati 4.482.583 450.291 4.932.874 Prodotti finiti e merci 2.404.000 907.833 3.311.833 Acconti 39.878 (39.878) 0 Totale rimanenze 10.231.994 2.202.601 12.434.595",
-                    "summary": "Le rimanenze sono state aumentate del 21,6% rispetto all'esercizio precedente, con un valore di € 12.434.595. La composizione delle rimanenze è la seguente: materie prime e sussidiarie (€ 4.189.888), prodotti in corso di lavorazione e semilavorati (€ 4.932.874), prodotti finiti e merci (€ 3.311.833)."
+                    "summary": "Le rimanenze sono state rilevate a € 12.434.595, con un aumento del 21,6% rispetto all'esercizio precedente. Le giacenze di materie prime e sussidiarie, semilavorati e prodotti finiti sono state iscritte al netto di un fondo svalutazione magazzino, ritenuto congruo."
                 }
             ]
         },
         "Sub-section-8": {
             "original_descriptive_title": "Crediti iscritti nell'attivo circolante",
-            "llm_section_title": "Crediti iscritti nell'attivo circolante",
+            "llm_section_title": "Crediti iscritti nell'attivo circolante: sintesi",
             "components_breakdown": [
                 {
                     "title": "Crediti iscritti nell'attivo circolante",
@@ -324,7 +324,7 @@
         },
         "Sub-section-9": {
             "original_descriptive_title": "Variazioni e scadenza dei crediti iscritti nell'attivo circolante / Suddivisione dei crediti iscritti nell'attivo circolante per area geografica (Part 1)",
-            "llm_section_title": "Crediti e attività circolanti",
+            "llm_section_title": "Crediti e Distinzione per Scadenza",
             "components_breakdown": [
                 {
                     "title": "Crediti - Distinzione per scadenza",
@@ -335,48 +335,48 @@
         },
         "Sub-section-10": {
             "original_descriptive_title": "Variazioni e scadenza dei crediti iscritti nell'attivo circolante / Suddivisione dei crediti iscritti nell'attivo circolante per area geografica / Crediti - Ripartizione per area geografica / Crediti iscritti nell'attivo circolante relativi ad operazioni con obbligo di retrocessione a termine / Disponibilità liquide / Ratei e risconti attivi / Oneri finanziari capitalizzati / Crediti - Operazioni con retrocessione a termine",
-            "llm_section_title": "Rischio creditizio e gestione finanziaria",
+            "llm_section_title": "Crediti e Attività Finanziarie",
             "components_breakdown": [
                 {
                     "title": "Crediti - Ripartizione per area geografica",
                     "text": "Vengono di seguito riportati i dati relativi alla suddivisione dei crediti iscritti nell’attivo circolante per area geografica, ai sensi dell'art. 2427, comma 1 numero 6 del Codice Civile: Area geografica ITALIA CEE EXTRA CEE FSC Totale Crediti verso clienti iscritti nell'attivo circolante 9.950.429 2.634.503 2.401.918 (190.411) 14.796.439 Crediti verso controllate iscritti nell'attivo circolante 368.556 0 0 0 368.556 Crediti verso controllanti iscritti nell'attivo circolante 640.110 0 0 0 640.110 Crediti verso imprese sottoposte al controllo delle controllanti iscritti nell'attivo circolante 69.560 0 0 0 69.560 Crediti tributari iscritti nell'attivo circolante 1.839.324 0 0 0 1.839.324 Attività per imposte anticipate iscritte nell'attivo circolante 256.214 0 0 0 256.214 Crediti verso altri iscritti nell'attivo circolante 331.151 0 0 0 331.151 Totale crediti iscritti nell'attivo circolante 13.455.344 2.634.503 2.401.918 (190.411) 18.301.354",
-                    "summary": "I crediti iscritti nell'attivo circolante sono suddivisi per area geografica, con un totale di € 18.301.354. I crediti verso clienti iscritti nell'attivo circolante sono di € 14.796.439, mentre i crediti verso controllate, controllanti e imprese sottoposte al controllo delle controllanti sono di € 368.556, € 640.110 e € 69.560 rispettivamente."
+                    "summary": "La suddivisione dei crediti iscritti nell'attivo circolante per area geografica non evidenzia segnali di stress finanziario. I crediti verso clienti iscritti nell'attivo circolante ammontano a € 14.796.439, mentre i crediti verso controllate e controllanti iscritti nell'attivo circolante sono rispettivamente pari a € 368.556 e € 640.110."
                 },
                 {
                     "title": "Crediti - Operazioni con retrocessione a termine",
                     "text": "Non sussistono crediti iscritti nell’attivo circolante derivanti da operazioni che prevedono l'obbligo per l'acquirente di retrocessione a termine, ai sensi dell'art. 2427, comma 1 numero 6-ter del Codice Civile. Attività finanziarie che non costituiscono immobilizzazioni Variazioni delle attività finanziarie che non costituiscono immobilizzazioni Attività finanziarie Le attività finanziarie comprese nell'attivo circolante sono pari a € 1.164.537 (€ 2.781.555 nel precedente esercizio). La variazione intervenuta nel corso dell'esercizio deve intendersi complementare all'attività di continua gestione e protezione della liquidità operata dalla Società anche nel corso del 2024. La Società gestisce, specifici strumenti finanziari, principalmente obbligazioni e quote di OICR, aventi profilo di rischio basso e possibilità di smobilizzo nel breve periodo. Come indicato in altra parte della presente nota integrativa, anche nell'esercizio in commento la Società si è avvalsa della proroga della facoltà già concessa dall'articolo 45, v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 comma 3-octies, del decreto “Semplificazioni fiscali” (D.L. n. 73/2022) di non svalutare i titoli iscritti nell’attivo circolante. Si evidenzia che l’impatto di tale svalutazione ammonterebbe ad euro 54.558 al lordo della relativa fiscalità considerata nel vincolo in sede di destinazione del risultato d'esercizio e al netto della svalutazione operata in esercizi precedenti di € 20.422. La composizione ed i movimenti delle singole voci sono così rappresentati: Valore di inizio esercizio Variazioni nell'esercizio Valore di fine esercizio Altri titoli non immobilizzati 2.781.555 (1.617.018) 1.164.537 Totale attività finanziarie che non costituiscono immobilizzazioni 2.781.555 (1.617.018) 1.164.537",
-                    "summary": "Non sussistono crediti iscritti nell'attivo circolante derivanti da operazioni che prevedono l'obbligo per l'acquirente di retrocessione a termine. Le attività finanziarie comprese nell'attivo circolante sono pari a € 1.164.537, con una variazione intervenuta nel corso dell'esercizio di € (1.617.018)."
+                    "summary": "Non sussistono crediti iscritti nell’attivo circolante derivanti da operazioni che prevedono l'obbligo per l'acquirente di retrocessione a termine. Le attività finanziarie comprese nell'attivo circolante sono pari a € 1.164.537 e sono gestite con un profilo di rischio basso e possibilità di smobilizzo nel breve periodo."
                 }
             ]
         },
         "Sub-section-11": {
             "original_descriptive_title": "Crediti iscritti nell'attivo circolante relativi ad operazioni con obbligo di retrocessione a termine / Disponibilità liquide / Ratei e risconti attivi / Oneri finanziari capitalizzati / Disponibilità liquide / Crediti iscritti nell'attivo circolante relativi ad operazioni con obbligo di retrocessione a termine / Disponibilità liquide / Ratei e risconti attivi / Oneri finanziari capitalizzati / Rivalutazione delle immobilizzazioni immateriali e materiali",
-            "llm_section_title": "Salute finanziaria dell'azienda",
+            "llm_section_title": "Sub-section-11 Placeholder",
             "components_breakdown": [
                 {
                     "title": "Disponibilità liquide",
                     "text": "Le disponibilità liquide comprese nell'attivo circolante sono pari a € 7.885.152 (€ 10.417.013 nel precedente esercizio). Le disponibilità liquide rilevano i saldi attivi di fine esercizio dei depositi bancari e del numerario effettivamente presenti presso le casse sociali. La composizione ed i movimenti delle singole voci sono così rappresentati: Valore di inizio esercizio Variazione nell'esercizio Valore di fine esercizio Depositi bancari e postali 10.413.027 (2.536.422) 7.876.605 Denaro e altri valori in cassa 3.986 4.561 8.547 Totale disponibilità liquide 10.417.013 (2.531.861) 7.885.152",
-                    "summary": "Le disponibilità liquide sono scese del 23,5% rispetto all'anno precedente, passando da € 10.417.013 a € 7.885.152. Ciò potrebbe indicare una riduzione della liquidità dell'azienda."
+                    "summary": "Nessun riassunto generato da LLM."
                 },
                 {
                     "title": "RATEI E RISCONTI ATTIVI",
                     "text": "I ratei e risconti attivi sono pari a € 271.199 (€ 385.319 nel precedente esercizio). La composizione ed i movimenti delle singole voci sono così rappresentati: Descrizione Importo Ratei attivi finanziari 20.825 Ratei attivi altri 4.145 Totale 24.970 Descrizione Importo RISCONTI ATTIVI OPERATIVI 151.633 RISCONTI ATTIVI FINANZIARI 93.435 ALTRI RISCONTI ATTIVI 1.160 Totale 246.228 Valore di inizio esercizio Variazione nell'esercizio Valore di fine esercizio Ratei attivi 14.769 10.201 24.970 Risconti attivi 370.550 (124.321) 246.229 v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Totale ratei e risconti attivi 385.319 (114.120) 271.199",
-                    "summary": "I ratei e risconti attivi sono scesi del 29,7% rispetto all'anno precedente, passando da € 385.319 a € 271.199. Ciò potrebbe indicare una riduzione della capacità dell'azienda di gestire i propri crediti e debiti."
+                    "summary": "Nessun riassunto generato da LLM."
                 },
                 {
                     "title": "Oneri finanziari capitalizzati",
                     "text": "Non sussistono oneri finanziari imputati nell'esercizio ai valori iscritti nell'attivo dello Stato Patrimoniale, ai sensi dell'art. 2427, comma 1 numero 8 del Codice Civile.",
-                    "summary": "Non sussistono oneri finanziari imputati nell'esercizio ai valori iscritti nell'attivo dello Stato Patrimoniale. Ciò potrebbe indicare che l'azienda non ha debiti finanziari significativi."
+                    "summary": "Nessun riassunto generato da LLM."
                 },
                 {
                     "title": "Svalutazioni per perdite durevoli di valore delle immobilizzazioni materiali e immateriali",
                     "text": "Ai sensi dell’art. 2427, comma 1 numero 3 bis del Codice Civile, si precisa che non sono state effettuate svalutazioni per perdite durevoli di valore.",
-                    "summary": "Non sono state effettuate svalutazioni per perdite durevoli di valore. Ciò potrebbe indicare che l'azienda non ha immobilizzazioni materiali o immateriali con valori di mercato inferiori ai loro valori contabili."
+                    "summary": "Nessun riassunto generato da LLM."
                 },
                 {
                     "title": "Rivalutazione delle immobilizzazioni immateriali e materiali",
                     "text": "Non sono state effettuate rivalutazioni monetarie ed economiche dalla società ai sensi dell'art.10 della legge 72/1983. Si rinvia a quanto precisato in altra parte della presente Nota Integrativa in merito alla rivalutazione dei marchi, effettuata nell'esercizio 2020, da intendersi l'unica effettuata dalla Società. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04",
-                    "summary": "Non sono state effettuate rivalutazioni monetarie ed economiche. Ciò potrebbe indicare che l'azienda non ha immobilizzazioni immateriali o materiali con valori di mercato significativamente diversi dai loro valori contabili."
+                    "summary": "Nessun riassunto generato da LLM."
                 }
             ]
         }
@@ -384,7 +384,7 @@
     "Nota integrativa, passivo e patrimonio netto": {
         "Sub-section-1": {
             "original_descriptive_title": "Variazioni nelle voci di patrimonio netto",
-            "llm_section_title": "Patrimonio Netto",
+            "llm_section_title": "Analisi del Patrimonio Netto",
             "components_breakdown": [
                 {
                     "title": "Initial Content",
@@ -394,56 +394,56 @@
                 {
                     "title": "Variazioni nelle voci di patrimonio netto",
                     "text": "Nei prospetti riportati di seguito viene evidenziata la movimentazione subita durante l'esercizio dalle singole poste che compongono il Patrimonio Netto e il dettaglio della voce ‘Altre riserve’: Valore di inizio esercizio Destinazione del risultato dell'esercizio precedente Altre variazioni Risultato d'esercizio Valore di fine esercizio Attribuzione di dividendi Altre destinazioni Incrementi Riclassifiche Capitale 3.096.000 0 0 0 0 3.096.000 Riserva da soprapprezzo delle azioni 554.000 0 0 0 0 554.000 Riserve di rivalutazione 4.552.816 0 0 0 0 4.552.816 Riserva legale 619.200 0 0 0 0 619.200 Riserve statutarie 0 - - - - 0 Altre riserve Riserva straordinaria 27.609.204 3.000.000 0 4.381.058 1 28.990.263 Varie altre riserve (2) 0 0 0 4 2 Totale altre riserve 27.609.202 3.000.000 0 4.381.058 5 28.990.265 Riserva per operazioni di copertura dei flussi finanziari attesi (90.533) 0 0 9.689 0 (80.844) Utili (perdite) portati a nuovo 0 - - - - 0 Utile (perdita) dell'esercizio 4.381.058 0 (4.381.058) 0 0 2.695.780 2.695.780 Perdita ripianata nell'esercizio 0 - - - - 0 Riserva negativa per azioni proprie in portafoglio (1.425.667) 0 0 0 0 (1.425.667) Totale patrimonio netto 39.296.076 3.000.000 (4.381.058) 4.390.747 5 2.695.780 39.001.550 Sì si da atto che la variazione intervenuta nella Riserva straordinaria per complessivi euro 1.381.058 tiene conto da un lato della destinazione del risultato d'esercizio 2023 di € 4.381.058.660 per € 1.381.058 alla Riserva Straordinaria e per € 3.000.000 a dividendo. Ai fini di una migliore intelligibilità delle variazioni del patrimonio netto qui di seguito vengono evidenziate le movimentazioni dell'esercizio precedente delle voci del patrimonio netto: Valore di inizio esercizio Altre destinazioni Incrementi v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Capitale 3.096.000 0 0 Riserva da sopraprezzo delle azioni 554.000 0 0 Riserve di rivalutazione 4.552.816 0 0 Riserva legale 619.200 0 0 Altre riserve Riserva straordinaria 23.195.877 2.862.660 1.550.667 Varie altre riserve 1 0 0 Totale altre riserve 23.195.878 2.862.660 1.550.667 Riserva per operazioni di copertura dei flussi finanziari attesi 13.258 0 0 Utile (perdita) dell'esercizio 2.862.660 -2.862.660 0 Riserva negativa per azioni proprie di portafoglio -2.350.000 0 0 Totale Patrimonio netto 32.543.812 0 1.550.667 Decrementi Riclassifiche Risultato d'esercizio Valore di fine esercizio Capitale 0 0 3.096.000 Riserva da sopraprezzo delle azioni 0 0 554.000 Riserve di rivalutazione 0 0 4.552.816 Riserva legale 0 0 619.200 Altre riserve Riserva straordinaria 0 0 27.609.204 Varie altre riserve 0 -3 -2 Totale altre riserve 0 -3 27.609.202 Riserva per operazioni di copertura dei flussi finanziari attesi 103.791 0 -90.533 Utile (perdita) dell'esercizio 0 0 4.381.058 4.381.058 Riserva negativa per azioni proprie di portafoglio -924.333 0 -1.425.667 Totale Patrimonio netto -820.542 -3 4.381.058 39.296.076",
-                    "summary": "La variazione della Riserva straordinaria per € 1.381.058 è dovuta alla destinazione del risultato d'esercizio 2023 di € 4.381.058.660 per € 1.381.058 alla Riserva Straordinaria e per € 3.000.000 a dividendo. Il patrimonio netto è stato influenzato anche dalle altre variazioni, come l'incremento della Riserva per operazioni di copertura dei flussi finanziari attesi di € 9.689 e la diminuzione della Riserva negativa per azioni proprie di portafoglio di € 1.425.667."
+                    "summary": "La Riserva Straordinaria è aumentata di € 1.381.058, mentre la Riserva per operazioni di copertura dei flussi finanziari attesi è diminuita di € 80.844. La variazione complessiva del patrimonio netto è di € -294.526."
                 }
             ]
         },
         "Sub-section-2": {
             "original_descriptive_title": "Disponibilità e utilizzo del patrimonio netto / Disponibilità ed utilizzo delle voci di patrimonio netto",
-            "llm_section_title": "Risorse finanziarie e vincoli",
+            "llm_section_title": "Disponibilità ed utilizzo delle voci di patrimonio netto",
             "components_breakdown": [
                 {
                     "title": "Disponibilità ed utilizzo delle voci di patrimonio netto",
                     "text": "Le informazioni richieste dall'articolo 2427, comma 1 numero 7-bis del Codice Civile relativamente alla specificazione delle voci del patrimonio netto con riferimento alla loro origine, possibilità di utilizzazione e distribuibilità, nonché alla loro avvenuta utilizzazione nei precedenti esercizi, sono desumibili dai prospetti sottostanti: Si precisa che l'importo totale non distribuibile di complessivi € 781.452 è costituito per € 619.200 dall'importo della riserva legale e per € 162.252 da vincolo di non ditribuibilità per effetto della delibera di destinazione del risultato d'esercizio 2022 ai sensi e per gli effetti dell'art. 45 c.2 del DL 73/2022. Importo Possibilità di utilizzazione Quota disponibile Capitale 3.096.000 0 Riserva da soprapprezzo delle azioni 554.000 A B C 554.000 v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Importo Possibilità di utilizzazione Quota disponibile Riserve di rivalutazione 4.552.816 A B C 4.552.816 Riserva legale 619.200 B 619.200 Riserve statutarie 0 - Altre riserve Riserva straordinaria 28.990.263 A B C 28.990.263 Varie altre riserve 2 0 Totale altre riserve 28.990.265 28.990.263 Riserva per operazioni di copertura dei flussi finanziari attesi (80.844) 0 Riserva negativa per azioni proprie in portafoglio (1.425.667) 0 Totale 36.305.770 34.716.279 Quota non distribuibile 781.452 Residua quota distribuibile 33.934.827 Legenda: A: per aumento di capitale B: per copertura perdite C: per distribuzione ai soci D: per altri vincoli statutari E: altro Variazioni della riserva per operazioni di copertura dei flussi finanziari attesi Riserva di Rivalutazione Come già indicato la Riserva di Rivalutazione ex L.N.126/2020 modificata dalla L.N. 148/2020 per complessivi € 4.552.816,00 è esposta al netto dell'imposta sostitutiva pari al 3 (tre) per cento dell'importo rivalutato e quindi per complessivi € 140.809,00. L'importo complessivo della rivalutazione operata a valere sui Marchi è quindi di totali € 4.693.625,00. Valore di inizio esercizio Valore di fine esercizio Altre rivalutazioni Legge n. 126/2020 mod. L.N. 148 /2020 4.552.816 4.552.816 Totale Altre rivalutazioni 4.552.816 4.552.816 Totale Riserve di rivalutazione 4.552.816 4.552.816",
-                    "summary": "L'azienda ha una quota non distribuibile di € 781.452, costituita da riserva legale e vincoli di non distribuibilità. La riserva legale è di € 619.200, mentre il vincolo di non distribuibilità è di € 162.252."
+                    "summary": "L'azienda ha un importo totale non distribuibile di € 781.452, costituito dalla riserva legale di € 619.200 e da vincoli di non distribuibilità per effetto della delibera di destinazione del risultato d'esercizio 2022."
                 }
             ]
         },
         "Sub-section-3": {
             "original_descriptive_title": "Disponibilità e utilizzo del patrimonio netto / Riserva per operazioni di copertura dei flussi finanziari attesi",
-            "llm_section_title": "Rischi finanziari e gestione del rischio",
+            "llm_section_title": "Riserva per operazioni di copertura dei flussi finanziari attesi",
             "components_breakdown": [
                 {
                     "title": "Riserva per operazioni di copertura dei flussi finanziari attesi",
                     "text": "Le informazioni richieste dall'articolo 2427-bis, comma 1 numero 1 lettera b-quater) del codice civile relativamente alla specificazione dei movimenti avvenuti nell’esercizio sono riepilogate nella tabella sottostante: Riserva per operazioni di copertura di flussi finanziari attesi Valore di inizio esercizio (90.533) Variazioni nell'esercizio Incremento per variazione di fair value 12.748 Effetto fiscale differito (3.059) Valore di fine esercizio (80.844) v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 La riserva per operazioni di copertura dei flussi finanziari attesi positiva per € 80.844 tiene conto della variazione del valore di fair value dei contratti derivati accesi dalla Società con esclusiva finalità di copertura dal rischio di variazioni del tasso di interesse (contratti IRS) rispetto ad alcuni contratti di finanziamento sottoscritti con primari istituti di credito. La voce è espressa al netto della relativa fiscalità temporanea per € 25.530 con una variazione negativa rispetto all'esercizio precedente di € 3.059. La relativa contropartita, al lordo della fiscalità anticipate, è iscritta alla voce del passivo patrimoniale \"Strumenti finanziari derivati attivi\".",
-                    "summary": "La riserva per operazioni di copertura dei flussi finanziari attesi è positiva per € 80.844, tenendo conto della variazione del valore di fair value dei contratti derivati accesi dalla Società. La voce è espressa al netto della relativa fiscalità temporanea per € 25.530, con una variazione negativa rispetto all'esercizio precedente di € 3.059."
+                    "summary": "La riserva è positiva per € 80.844 e tiene conto della variazione del valore di fair value dei contratti derivati accesi per copertura del rischio di variazioni del tasso di interesse. La voce è espressa al netto della relativa fiscalità temporanea per € 25.530."
                 }
             ]
         },
         "Sub-section-4": {
             "original_descriptive_title": "Fondi per rischi e oneri / Trattamento di fine rapporto di lavoro subordinato",
-            "llm_section_title": "Rischi e oneri",
+            "llm_section_title": "Sub-section-4 Placeholder",
             "components_breakdown": [
                 {
                     "title": "Fondi per rischi e oneri",
                     "text": "FONDI PER RISCHI ED ONERI I fondi per rischi ed oneri sono iscritti nelle passività per complessivi € 642.109 (€ 677.495 nel precedente esercizio). La voce fondo per trattamento quiescenza e simili è costituita da accantonamenti per indennità suppletiva di clientela per complessivi € 370.734 e per trattamento di fine mandato amministratori per € 135.000. La voce B3 \"Strumenti finanziari derivati passivi accoglie il fair value negativo dei contratti derivati accesi dalla Società con esclusiva finalità di copertura dal rischio di variazioni del tasso di interesse (contratti IRS) rispetto ad alcuni contratti di finanziamento sottoscritti con primari istituti di credito. Inoltre nell'esercizio 2024 è stato accantonato l'importo di € 30.000 a valere su potenziali contenziosi. La movimentazione rispetto all'esercizio precedente è rappresentata come segue: Fondo per trattamento di quiescenza e obblighi simili Strumenti finanziari derivati passivi Altri fondi Totale fondi per rischi e oneri Valore di inizio esercizio 558.372 119.123 0 677.495 Variazioni nell'esercizio Accantonamento nell'esercizio 89.616 0 30.000 119.616 Utilizzo nell'esercizio 142.253 12.749 0 155.002 Totale variazioni (52.637) (12.749) 30.000 (35.386) Valore di fine esercizio 505.735 106.374 30.000 642.109",
-                    "summary": "Summarization failed or empty."
+                    "summary": "Nessun riassunto generato da LLM."
                 },
                 {
                     "title": "Trattamento di fine rapporto di lavoro subordinato",
                     "text": "TFR Il trattamento di fine rapporto di lavoro subordinato è iscritto tra le passività per complessivi € 223.076 (€ 239.742 nel precedente esercizio). La composizione ed i movimenti delle singole voci sono così rappresentati: Trattamento di fine rapporto di lavoro subordinato Valore di inizio esercizio 239.742 Variazioni nell'esercizio Accantonamento nell'esercizio 422.939 Altre variazioni (439.605) Totale variazioni (16.666) v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Valore di fine esercizio 223.076",
-                    "summary": "Il trattamento di fine rapporto di lavoro subordinato è diminuito del 6,9% rispetto all'esercizio precedente, con un importo complessivo di € 223.076."
+                    "summary": "Nessun riassunto generato da LLM."
                 }
             ]
         },
         "Sub-section-5": {
             "original_descriptive_title": "Debiti / Variazioni e scadenza dei debiti / Suddivisione dei debiti per area geografica / DEBITI",
-            "llm_section_title": "Passività e debiti",
+            "llm_section_title": "Passività",
             "components_breakdown": [
                 {
                     "title": "DEBITI",
                     "text": "I debiti sono iscritti nelle passività per complessivi € 36.110.055 (€ 36.177.382 nel precedente esercizio).",
-                    "summary": "I debiti sono iscritti nelle passività per complessivi € 36.110.055, con un aumento rispetto al precedente esercizio."
+                    "summary": "I debiti sono aumentati di € 67.327 nel confronto con l'esercizio precedente, attestandosi a € 36.110.055."
                 },
                 {
                     "title": "Debiti verso banche",
@@ -453,81 +453,81 @@
                 {
                     "title": "Acconti",
                     "text": "La voce accoglie gli anticipi ricevuti dai clienti per forniture di beni o servizi non ancora effettuate.",
-                    "summary": "Summarization failed or empty."
+                    "summary": "null"
                 },
                 {
                     "title": "Debiti verso fornitori",
                     "text": "La voce accoglie i debiti originati da acquisizioni di beni o sevizi e i debiti per fatture da ricevere nella misura in cui i relativi rischi, oneri e benefici significativi connessi alla proprietà dei beni sono stati trasferiti, ovvero i servizi sono stati resi.",
-                    "summary": "Summarization failed or empty."
+                    "summary": "null"
                 },
                 {
                     "title": "Debiti tributari",
                     "text": "I debiti verso l’Erario sono costituiti principalmente da debiti per imposte e per ritenute sui redditi di lavoro dipendente. In particolare, debiti per ritenute su redditi di lavoro dipendente per € 337.522 e per ritenute per su redditi di lavoro autonomo per € 5.280, queste ultime corrisposte nei primi mesi del 2024 alle rispettive scadenze. La voce accoglie altresì l'importo dell'imposta sostitutiva sulla rivalutazione del TFR per € 1.410, e altri debiti tributari per € 4.123.",
-                    "summary": "I debiti tributari sono costituiti principalmente da debiti per imposte e per ritenute sui redditi di lavoro dipendente, con un importo di € 337.522."
+                    "summary": "I debiti tributari sono costituiti principalmente da debiti per imposte e per ritenute sui redditi di lavoro dipendente, con un importo totale di € 339.523."
                 },
                 {
                     "title": "Debiti verso Istituti previdenziali e di sicurezza sociale",
                     "text": "La voce accoglie i debiti verso istituti di previdenza e di sicurezza sociale derivanti da obblighi contributivi, previdenziali o assicurativi, derivanti da norme di legge, contratti collettivi di lavoro e da accordi integrativi locali o aziendali. Sono inclusi in questa voce anche gli importi dei contributi sociali trattenuti a carico dei dipendenti.",
-                    "summary": "I debiti verso istituti di previdenza e di sicurezza sociale derivano da obblighi contributivi, previdenziali o assicurativi."
+                    "summary": "null"
                 }
             ]
         },
         "Sub-section-6": {
             "original_descriptive_title": "Debiti / Variazioni e scadenza dei debiti / Suddivisione dei debiti per area geografica / Altri debiti",
-            "llm_section_title": "Rischi e debiti",
+            "llm_section_title": "Condizioni Finanziarie",
             "components_breakdown": [
                 {
                     "title": "Altri debiti",
                     "text": "La voce costituisce una posta residuale in cui confluiscono tutte le voci di debito che non hanno trovato una specifica collocazione nelle precedenti voci. L’importo complessivo è riferito sostanzialmente a fondo ferie dipendenti (€ 540.983), a debiti verso dipendenti per retribuzioni (€ 372.226) oltre che ai debiti verso dipendenti per premi relativi al 2024 (€ 270.153) e per il residuo ad altre poste di minore entità. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 La movimentazione intercorsa nell'esercizio delle singole voci di Debiti sopra descritte è così rappresentata: Valore di inizio esercizio Variazioni nell'esercizio Valore di fine esercizio Debiti verso banche 21.238.037 -808.583 20.429.454 Debiti verso altri finanziatori 0 7.061 7.061 Acconti 64.327 -43.119 21.208 Debiti verso fornitori 11.927.095 1.041.722 12.968.817 Debiti verso imprese controllate 1.574 392.094 393.668 Debiti tributari 1.032.634 -684.299 348.335 Debiti vs.istituti di previdenza e sicurezza sociale 661.605 53.496 715.101 Altri debiti 1.252.110 -25.699 1.226.411 Totale 36.177.382 -67.327 36.110.055",
-                    "summary": "La voce rappresenta una posta residuale con un importo complessivo di € 1.226.411, che include debiti verso dipendenti, fondo ferie e premi. La movimentazione intercorsa nell'esercizio è stata di € -25.699."
+                    "summary": "La voce rappresenta una posta residuale di debito, composta principalmente da fondo ferie dipendenti, debiti verso dipendenti per retribuzioni e premi. L'importo è risultato in aumento di € 25.699 nel 2024, portando il totale a € 1.226.411."
                 }
             ]
         },
         "Sub-section-7": {
             "original_descriptive_title": "Debiti / Variazioni e scadenza dei debiti / Suddivisione dei debiti per area geografica / Debiti - Distinzione per scadenza",
-            "llm_section_title": "Condizioni finanziarie",
+            "llm_section_title": "Debiti",
             "components_breakdown": [
                 {
                     "title": "Debiti - Distinzione per scadenza",
                     "text": "Qui di seguito vengono riportati i dati relativi alla suddivisione dei debiti per scadenza, ai sensi dell'art. 2427, comma 1 numero 6 del Codice Civile: Valore di inizio esercizio Variazione nell'esercizio Valore di fine esercizio Quota scadente entro l'esercizio Quota scadente oltre l'esercizio Di cui di durata residua superiore a 5 anni Debiti verso banche 21.238.037 (808.583) 20.429.454 4.804.430 15.625.024 4.013.844 Debiti verso altri finanziatori 0 7.061 7.061 7.061 0 0 Acconti 64.327 (43.119) 21.208 21.208 0 0 Debiti verso fornitori 11.927.095 1.041.722 12.968.817 12.968.817 0 0 Debiti verso imprese controllate 1.574 392.094 393.668 393.668 0 0 Debiti tributari 1.032.634 (684.299) 348.335 348.335 0 0 Debiti verso istituti di previdenza e di sicurezza sociale 661.605 53.496 715.101 715.101 0 0 Altri debiti 1.252.110 (25.699) 1.226.411 1.226.411 0 0 Totale debiti 36.177.382 (67.327) 36.110.055 20.485.031 15.625.024 4.013.844",
-                    "summary": "Il debito totale è di 36.177.382 €, con una variazione negativa di 67.327 € rispetto all'esercizio precedente. La quota scadente entro l'esercizio è di 20.485.031 €, mentre la quota scadente oltre l'esercizio è di 15.625.024 €."
+                    "summary": "I debiti totali ammontano a 36,11 milioni di euro, con una variazione negativa di 67.327 euro rispetto all'inizio dell'esercizio. La quota scadente entro l'esercizio è di 20,485 milioni di euro, mentre la quota scadente oltre l'esercizio è di 15,625 milioni di euro."
                 },
                 {
                     "title": "Debiti - Ripartizione per area geografica",
                     "text": "Qui di seguito vengono riportati i dati relativi alla suddivisione dei debiti per area geografica, ai sensi dell'art. 2427, comma 1 numero 6 del Codice Civile: Area geografica ITALIA CEE EXTRA CEE Totale Debiti verso banche 20.429.454 0 0 20.429.454 Debiti verso altri finanziatori 7.061 0 0 7.061 v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Acconti 21.208 0 0 21.208 Debiti verso fornitori 11.509.232 560.499 899.086 12.968.817 Debiti verso imprese controllate 393.668 0 0 393.668 Debiti tributari 348.335 0 0 348.335 Debiti verso istituti di previdenza e di sicurezza sociale 715.101 0 0 715.101 Altri debiti 1.226.411 0 0 1.226.411 Debiti 34.650.470 560.499 899.086 36.110.055",
-                    "summary": "La maggior parte dei debiti (34.650.470 €) è concentrata in Italia, con una quota minore (560.499 €) in CEE e una quota ancora minore (899.086 €) in EXTRA CEE."
+                    "summary": "I debiti verso fornitori ammontano a 12,97 milioni di euro, con una quota di 560.499 euro scadente oltre l'esercizio. I debiti verso banche ammontano a 20,43 milioni di euro, mentre i debiti verso imprese controllate ammontano a 393.668 euro."
                 }
             ]
         },
         "Sub-section-8": {
             "original_descriptive_title": "Debiti assistiti da garanzie reali su beni sociali / Debiti relativi ad operazioni con obbligo di retrocessione a termine / Finanziamenti effettuati da soci della società / Ratei e risconti passivi (Part 1)",
-            "llm_section_title": "Rischi e garanzie sui debiti",
+            "llm_section_title": "Debiti assistiti da garanzie reali e situazione finanziaria",
             "components_breakdown": [
                 {
                     "title": "Debiti assistiti da garanzie reali su beni sociali",
                     "text": "Qui di seguito si specificano le garanzie reali sui beni sociali, ai sensi dell'art. 2427, comma 1 numero 6 del Codice Civile. Debiti assistiti da garanzie reali Debiti non assistiti da garanzie reali Totale Debiti assistiti da pegni Totale debiti assistiti da garanzie reali Debiti verso banche 9.900.000 9.900.000 10.529.454 20.429.454 Debiti verso altri finanziatori 0 0 7.061 7.061 Acconti 0 0 21.208 21.208 Debiti verso fornitori 0 0 12.968.817 12.968.817 Debiti verso imprese controllate 0 0 393.668 393.668 Debiti tributari 0 0 348.335 348.335 Debiti verso istituti di previdenza e di sicurezza sociale 0 0 715.101 715.101 Altri debiti 0 0 1.226.411 1.226.411 Totale debiti 9.900.000 9.900.000 26.210.055 36.110.055 Le garanzie sono relative ad atto di pegno, sottoscritto il 30 novembre 2023, rilasciato dalla controllante Volpato Industrie S.p.A. a favore dell'ente erogatore del finanziamento bancario acceso dalla stessa società - definita linea A1 per complessivi e originari euro 10 milioni - a valere sul 100% delle quote della Riviera S.r.l. integralmente a favore di Credit Agricole Italia S.p.a. Riviera Srl a sua volta, ha rilasciato pegno, a favore di Credit Agricole, sul 100% delle quote di Gollinucci Srl. si ricorda che Riviera S.r.l. è stata incorporata in Gollinucci S.r.l. con atto dell'1.8.2024.",
-                    "summary": "L'azienda ha debiti assistiti da garanzie reali per complessivi 20.429.454 euro, principalmente verso banche e fornitori. Le garanzie sono state rilasciate dalla controllante Volpato Industrie S.p.A. a favore di Credit Agricole Italia S.p.A."
+                    "summary": "La società ha un debito totale di 36.110.055€, con 20.429.454€ di debiti assistiti da garanzie reali. Le garanzie sono relative ad un atto di pegno sottoscritto dalla controllante Volpato Industrie S.p.A. a favore di Credit Agricole Italia S.p.a."
                 }
             ]
         },
         "Sub-section-9": {
             "original_descriptive_title": "Debiti assistiti da garanzie reali su beni sociali / Debiti relativi ad operazioni con obbligo di retrocessione a termine / Finanziamenti effettuati da soci della società / Ratei e risconti passivi / Debiti - Operazioni con retrocessione a termine",
-            "llm_section_title": "Rischi e passività",
+            "llm_section_title": "Condizioni finanziarie",
             "components_breakdown": [
                 {
                     "title": "Debiti - Operazioni con retrocessione a termine",
                     "text": "Non sussistono debiti derivanti da operazioni che prevedono l'obbligo per l'acquirente di retrocessione a termine, ai sensi dell'art. 2427, comma 1 numero 6-ter del Codice Civile.",
-                    "summary": "Non sussistono debiti derivanti da operazioni che prevedono l'obbligo per l'acquirente di retrocessione a termine."
+                    "summary": "Non esistono debiti derivanti da operazioni che prevedono l'obbligo per l'acquirente di retrocessione a termine."
                 },
                 {
                     "title": "Finanziamenti effettuati dai soci",
                     "text": "v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Non sussistono finanziamenti effettuati dai soci della società, ai sensi dell'art. 2427, comma 1 numero 19-bis del Codice Civile.",
-                    "summary": "Non sussistono finanziamenti effettuati dai soci della società."
+                    "summary": "Non esistono finanziamenti effettuati dai soci della società."
                 },
                 {
                     "title": "RATEI E RISCONTI PASSIVI",
                     "text": "I ratei e risconti passivi sono iscritti nelle passività per complessivi € 1.239.019 (€ 767.657 nel precedente esercizio). La composizione ed i movimenti delle singole voci sono così rappresentati: Descrizione Importo RATEI PASSIVI FINANZIARI 87.167 RATEI PASSIVI OPERATIVI 11.161 Totale 98.328 Descrizione Importo RISCONTI PASSIVI OPERATIVI 60 RISCONTI SULN178 1.082.733 ALTRI RISCONTI 57.898 Totale 1.140.691 Valore di inizio esercizio Variazione nell'esercizio Valore di fine esercizio Ratei passivi 106.748 (8.420) 98.328 Risconti passivi 660.909 479.782 1.140.691 Totale ratei e risconti passivi 767.657 471.362 1.239.019 v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04",
-                    "summary": "La società ha un aumento dei ratei e risconti passivi di € 471.362, per un totale di € 1.239.019."
+                    "summary": "I ratei e risconti passivi sono aumentati di € 471.362, portando il totale a € 1.239.019."
                 }
             ]
         }
@@ -535,7 +535,7 @@
     "Nota integrativa, conto economico": {
         "Sub-section-1": {
             "original_descriptive_title": "Nota integrativa, conto economico INFORMAZIONI SUL CONTO ECONOMICO Valore della produzione / Suddivisione dei ricavi delle vendite e delle prestazioni per categoria di attività / Suddivisione dei ricavi delle vendite e delle prestazioni per area geografica",
-            "llm_section_title": "Rischi e prospettive finanziarie",
+            "llm_section_title": "Ricavi e proventi",
             "components_breakdown": [
                 {
                     "title": "Nota integrativa, conto economico INFORMAZIONI SUL CONTO ECONOMICO Valore della produzione",
@@ -545,7 +545,7 @@
                 {
                     "title": "Suddivisione dei ricavi delle vendite e delle prestazioni per categoria di attività",
                     "text": "Ricavi delle vendite e delle prestazioni - Ripartizione per categoria di attività In relazione a quanto disposto dall'art. 2427, comma 1 numero 10 del Codice Civile viene esposta nei seguenti prospetti la ripartizione dei ricavi per categorie di attività: Categoria di attività Valore esercizio corrente Vendita beni 61.547.966 Cessione materie prime sussidiarie e semilavorati 676.960 Totale 62.224.926",
-                    "summary": "Summarization failed or empty."
+                    "summary": "I ricavi delle vendite e delle prestazioni sono principalmente generati dalla vendita di beni, con un totale di € 61.547.966. La cessione di materie prime sussidiarie e semilavorati contribuisce con € 676.960."
                 },
                 {
                     "title": "Suddivisione dei ricavi delle vendite e delle prestazioni per area geografica",
@@ -556,28 +556,28 @@
         },
         "Sub-section-2": {
             "original_descriptive_title": "Costi della produzione COSTI DELLA PRODUZIONE / Proventi e oneri finanziari / Composizione dei proventi da partecipazione / Ripartizione degli interessi e altri oneri finanziari per tipologia di debiti / Importo e natura dei singoli elementi di ricavo/costo di entità o incidenza eccezionali / Imposte sul reddito d'esercizio, correnti, differite e anticipate / Rilevazione delle imposte differite e anticipate ed effetti conseguenti / Spese per servizi",
-            "llm_section_title": "Spese per Servizi: analisi della variazione",
+            "llm_section_title": "Spese per servizi - Analisi della variazione",
             "components_breakdown": [
                 {
                     "title": "Spese per servizi",
                     "text": "Le spese per servizi sono iscritte nei costi della produzione del conto economico per complessivi € 12.826.906 (€ 12.675.723 nel precedente esercizio). I costi per servizi presentano un incremento di circa € 119 mila rispetto all’esercizio precedente. Tale variazione è riconducibile, da un lato ad un incremento dei costi per lavorazioni esterne e dei costi per smaltimento rifiuti, dall’ altro alla riduzione dei costi connessi a energia e gas, ad una riduzione delle provvigioni, coerentemente con la riduzione dei ricavi di vendita, ed alla riduzione delle spese per eventi fieristici. Si segnala, inoltre, che all’interno della voce sono presenti costi di natura non ricorrente e/o straordinaria quali: 70 mila euro connessi all’organizzazione dell’evento per celebrare i 50 anni di attività (1974-2024) della Volpato Industrie, 160 mila euro di costi connessi a consulenze per l’avvio del software di pianificazione della produzione e 26 mila euro per analisi tecniche straordinarie su impiantistica di fabbrica, 47 mila di compensi per attività di “ cost reduction ”, che si sono esauriti nel 2025. La variazione rispetto all'esercizio precedente è così costituita: Valore esercizio precedente Variazione Valore esercizio corrente Servizi per acquisti 9.919 -9.869 50 Trasporti 1.640.755 -7.424 1.633.331 Lavorazioni esterne 1.542.241 288.034 1.830.275 Energia elettrica 1.241.701 61.772 1.303.473 Gas 873.875 -182.361 691.514 Acqua 13.383 -1.583 11.800 Spese di manutenzione e riparazione 1.115.312 114.940 1.230.252 Servizi e consulenze tecniche 290.930 59.172 350.102 Compensi agli amministratori 568.488 272 568.760 Compensi a sindaci e revisori 50.936 5.492 56.428 Provvigioni passive 1.541.456 -170.891 1.370.565 Pubblicità 33.820 -4.137 29.683 Spese e consulenze legali 33.844 7.415 41.259 v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Consulenze fiscali, amministrative e commerciali 368.131 -225.672 142.459 Spese telefoniche 75.808 12.775 88.583 Assicurazioni 295.716 20.288 316.004 Spese di rappresentanza 28.244 82.792 111.036 Spese di viaggio e trasferta 191.445 -21.148 170.297 Spese di aggiornamento, formazione e addestramento 33.044 6.008 39.052 Altri 2.726.675 115.308 2.841.983 Totale 12.675.723 151.183 12.826.906",
-                    "summary": "Le spese per servizi presentano un incremento di circa € 119 mila rispetto all’esercizio precedente, dovuto a varie cause, tra cui incremento dei costi per lavorazioni esterne e smaltimento rifiuti, riduzione dei costi per energia e gas, provvigioni e spese per eventi fieristici."
+                    "summary": "Le spese per servizi sono aumentate di circa € 119 mila rispetto all’esercizio precedente, a causa di un incremento dei costi per lavorazioni esterne e smaltimento rifiuti, e una riduzione dei costi connessi a energia e gas, provvigioni e spese per eventi fieristici."
                 }
             ]
         },
         "Sub-section-3": {
             "original_descriptive_title": "Costi della produzione COSTI DELLA PRODUZIONE / Proventi e oneri finanziari / Composizione dei proventi da partecipazione / Ripartizione degli interessi e altri oneri finanziari per tipologia di debiti / Importo e natura dei singoli elementi di ricavo/costo di entità o incidenza eccezionali / Imposte sul reddito d'esercizio, correnti, differite e anticipate / Rilevazione delle imposte differite e anticipate ed effetti conseguenti / Spese per godimento beni di terzi",
-            "llm_section_title": "Rischi e prospettive finanziarie",
+            "llm_section_title": "Rischi e prospettive aziendali",
             "components_breakdown": [
                 {
                     "title": "Spese per godimento beni di terzi",
                     "text": "Le spese per godimento beni di terzi sono iscritte nei costi della produzione del conto economico per complessivi € 2.160.558 (€ 1.996.193 nel precedente esercizio). La voce è nella sostanza in linea con l'esercizio precedente. La composizione delle singole voci è così costituita: Valore esercizio precedente Variazione Valore esercizio corrente Affitti e locazioni 1.232.231 133.376 1.365.607 Canoni di leasing beni mobili 421.373 -9.719 411.654 Royalties, diritti d'autore e brevetti 3.144 1.599 4.743 Altri 339.445 39.109 378.554 Totale 1.996.193 164.365 2.160.558 Si evidenzia che il bene oggetto del leasing finanziario relativo ai canoni sopra evidenziati è stato oggetto di riscatto ordinario nel mese di dicembre 2024.",
-                    "summary": "La voce è in linea con l'esercizio precedente, con un aumento del 8,2% rispetto al 2023. Il bene oggetto di leasing finanziario è stato riscattato nel 2024."
+                    "summary": "La voce è nella sostanza in linea con l'esercizio precedente, con un aumento delle spese per affitti e locazioni e una riduzione dei canoni di leasing beni mobili. Il bene oggetto del leasing finanziario è stato oggetto di riscatto ordinario nel mese di dicembre 2024."
                 },
                 {
                     "title": "Costi del personale",
                     "text": "I costi per il personale sono iscritti nei costi della produzione del conto economico per complessivi € 10.125.981 (€ 9.715.630 nell'esercizio precedente). La composizione delle singole voci è così costituita: Valore esercizio precedente Variazione Valore esercizio corrente Salari e stipendi 6.992.651,00 332.328,00 7.324.979,00 Oneri sociali 2.108.118,00 57.193,00 2.165.311,00 Trattamento di fine rapporto 422.142,00 797,00 422.939,00 Altri costi 192.719,00 20.033,00 212.752,00 Totale 9.715.630,00 410.351,00 10.125.981,00 La voce comprende l’intera spesa per il personale dipendente ivi compresi i miglioramenti di merito, passaggi di categoria, mensilità aggiuntive, costo delle ferie (P.A.R.) non godute, incentivazioni variabili collegiali e individuali, premi di risultato nonché gli accantonamenti di legge e contratti collettivi al lordo delle ritenute per imposte ed oneri sociali a carico del dipendente. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Come previsto dal P.C. OIC n. 12 nella voce in commento è incluso il costo (retribuzioni, oneri sociali) del personale interinale. La voce s’incrementa, rispetto all’esercizio precedente anche per effetto di costi straordinari di ristrutturazione pari a circa 170 mila euro.",
-                    "summary": "La spesa per il personale è aumentata del 4,2% rispetto al 2023, con un aumento di circa 170 mila euro per costi straordinari di ristrutturazione."
+                    "summary": "La voce comprende l'intera spesa per il personale dipendente, con un aumento del 4,14% rispetto all'esercizio precedente. Inclusi sono anche i costi straordinari di ristrutturazione pari a circa 170 mila euro."
                 }
             ]
         },
@@ -598,7 +598,7 @@
                 {
                     "title": "Oneri diversi di gestione",
                     "text": "Gli oneri diversi di gestione sono iscritti nei costi della produzione del conto economico per complessivi € 261.456 (€ 238.372 nel precedente esercizio). La composizione delle singole voci e la relativa variazione è così costituita: Valore esercizio precedente Variazione Valore esercizio corrente Imposte di bollo 13.023 -7.273 5.750 ICI/IMU 36.316 -1.944 34.372 Abbonamenti riviste, giornali ... 4.514 9.523 14.037 Sopravvenienze e insussistenze passive 47.297 38.856 86.153 Minusvalenze di natura non finanziaria 182 7.568 7.750 Altri oneri di gestione 137.040 -23.646 113.394 Totale 238.372 23.084 261.456",
-                    "summary": "Gli oneri diversi di gestione sono aumentati del 9,7% rispetto all'esercizio precedente, con un totale di € 261.456. La composizione delle singole voci è la seguente: Imposte di bollo € 5.750, ICI/IMU € 34.372, Abbonamenti riviste e giornali € 14.037, Sopravvenienze e insussistenze passive € 86.153 e Minusvalenze di natura non finanziaria € 7.750."
+                    "summary": "Gli oneri diversi di gestione sono aumentati del 9,7% rispetto all'esercizio precedente, con un totale di € 261.456. La composizione delle singole voci è così costituita: Imposte di bollo € 5.750, ICI/IMU € 34.372, Abbonamenti riviste e giornali € 14.037, Sopravvenienze e insussistenze passive € 86.153 e Altri oneri di gestione € 113.394."
                 },
                 {
                     "title": "PROVENTI E ONERI FINANZIARI Proventi da partecipazione",
@@ -624,12 +624,12 @@
         },
         "Sub-section-5": {
             "original_descriptive_title": "Costi della produzione COSTI DELLA PRODUZIONE / Proventi e oneri finanziari / Composizione dei proventi da partecipazione / Ripartizione degli interessi e altri oneri finanziari per tipologia di debiti / Importo e natura dei singoli elementi di ricavo/costo di entità o incidenza eccezionali / Imposte sul reddito d'esercizio, correnti, differite e anticipate / Rilevazione delle imposte differite e anticipate ed effetti conseguenti / IMPOSTE SUL REDDITO D'ESERCIZIO, CORRENTI, DIFFERITE E ANTICIPATE",
-            "llm_section_title": "Imposte e Fiscalità",
+            "llm_section_title": "Imposte sul reddito d'esercizio",
             "components_breakdown": [
                 {
                     "title": "IMPOSTE SUL REDDITO D'ESERCIZIO, CORRENTI, DIFFERITE E ANTICIPATE",
                     "text": "La composizione delle singole voci è così rappresentata: Imposte correnti Imposte anticipate IRES 582.271 27.738 IRAP 234.867 3.338 Totale 817.138 31.076 I seguenti prospetti, redatti sulla base delle indicazioni suggerite dall'OIC 25, riportano le informazioni richieste dall'art. 2427, comma 1 numero 14, lett. a) e b) del Codice Civile. In particolare, contengono le informazioni sui valori di sintesi della movimentazione dell’esercizio della ‘Fiscalità complessiva anticipata e differita’ e sulla composizione delle differenze temporanee deducibili che hanno originato ‘Attività per imposte anticipate’. Non sussistono differenze temporanee imponibili che hanno originato ‘Passività per imposte differite’ e non sussistono perdite fiscali. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 IRES IRAP A) Differenze temporanee Totale differenze temporanee deducibili 734.077 600.746 Differenze temporanee nette (734.077) (600.746) B) Effetti fiscali Fondo imposte differite (anticipate) a inizio esercizio (176.178) (23.429) Imposte differite (anticipate) dell'esercizio (27.739) (3.338) Fondo imposte differite (anticipate) a fine esercizio (203.917) (26.767)",
-                    "summary": "Summarization failed or empty."
+                    "summary": "Non sussistono differenze temporanee imponibili che hanno originato 'Passività per imposte differite'. Non sussistono perdite fiscali. Il fondo imposte differite (anticipate) a fine esercizio ammonta a 26.767 euro."
                 }
             ]
         },
@@ -640,7 +640,7 @@
                 {
                     "title": "Dettaglio delle differenze temporanee deducibili",
                     "text": "Descrizione Importo al termine dell'esercizio precedente Variazione verificatasi nell'esercizio Importo al termine dell'esercizio Aliquota IRES Effetto fiscale IRES Aliquota IRAP Effetto fiscale IRAP Fondo Svalutazione Crediti 133.331 0 133.331 24,00% 31.999 0,00% 0 Indennità Suppletiva clientela 22.719 0 22.719 24,00% 5.453 3,90% 886 Fondo obsolescenza magazzino 578.027 85.578 663.605 24,00% 159.265 3,90% 25.881 Fdo Rischio 0 30.000 30.000 24,00% 7.200 0,00% 0 Solo effetto S/P 0 0 0 0,00% 0 0,00% 0 Fair value su derivati di copertura 119.123 (12.749) 106.374 24,00% 25.530 0,00% 0 Si ricorda che la Legge di Bilancio 2022 (n. 234/2021) ha modificato retroattivamente il regime di rivalutazione e riallineamento del marchio, portando l’arco temporale della deducibilità fiscale da 18 a 50 anni. Sulla rivalutazione del marchio operata ex L.N. 126/2020 modificata dalla L.N. 148/2020 per complessivi euro 4.693.625, stante l’ orizzonte temporale indicato, la Società, prudenzialmente, non ha stanziato la relativa fiscalità differita attiva. Si forniscono inoltre le ulteriori seguenti informazioni: Riconciliazione tra aliquota ordinaria ed aliquota effettiva Il seguente prospetto, redatto sulla base delle indicazioni suggerite dall'OIC 25, permette di riconciliare l'aliquota ordinaria Ires con l'aliquota effettiva. Esercizio Corrente Esercizio Precedente Aliquota d'imposta nominale 24,00 24,00 Effetto delle differenze permanenti 234.867,00 296.669,00 Costi indeducibili -253.372 -406.783 Altre differenze permanenti negative (positive) -31.076 -19.887 Aliquota effettiva 22,58 21,68 v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04",
-                    "summary": "La società non ha stanziato la fiscalità differita attiva per la rivalutazione del marchio a causa dell'orizzonte temporale indicato. Ciò potrebbe avere un impatto negativo sulla sua situazione finanziaria futura."
+                    "summary": "La società non ha stanziato la fiscalità differita attiva per la rivalutazione del marchio, a causa dell'orizzonte temporale indicato. Ciò potrebbe comportare un aumento dei costi futuri. L'aliquota effettiva Ires è scesa a 22,58% nel 2024, a causa delle differenze permanenti negative."
                 }
             ]
         }
@@ -653,38 +653,38 @@
                 {
                     "title": "Nota integrativa, altre informazioni ALTRE INFORMAZIONI Dati sull'occupazione",
                     "text": "Dati sull’occupazione Vengono di seguito riportate le informazioni concernenti il personale, ai sensi dell'art. 2427, comma 1 numero 15 del Codice Civile: Numero medio Quadri 12 Impiegati 39 Operai 144 Totale Dipendenti 195",
-                    "summary": "La società ha un totale di 195 dipendenti, con 12 quadri, 39 impiegati e 144 operai."
+                    "summary": null
                 },
                 {
                     "title": "Compensi, anticipazioni e crediti concessi ad amministratori e sindaci e impegni assunti per loro conto",
                     "text": "Compensi agli organi sociali Vengono di seguito riportate le informazioni concernenti gli amministratori ed i sindaci, ai sensi dell'art. 2427, comma 1 numero 16 del Codice Civile: Amministratori Sindaci Compensi 568.760 23.546",
-                    "summary": "Gli amministratori hanno ricevuto un compenso di 568.760 €, mentre i sindaci hanno ricevuto un compenso di 23.546 €."
+                    "summary": "Gli amministratori hanno ricevuto un compenso totale di 568.760€, mentre i sindaci hanno ricevuto un compenso totale di 23.546€."
                 },
                 {
                     "title": "Compensi al revisore legale o società di revisione",
                     "text": "Compensi al revisore legale ovvero alla società di revisione Qui di seguito vengono riportate le informazioni concernenti i compensi al revisore legale ovvero alla società di revisione ai sensi dell'art. 2427 comma 1 numero 16 bis del Codice Civile: Valore Revisione legale dei conti annuali 32.882 Totale corrispettivi spettanti al revisore legale o alla società di revisione 32.882",
-                    "summary": "Il compenso per la revisione legale dei conti annuali è stato di 32.882 €."
+                    "summary": "Il compenso totale per la revisione legale dei conti annuali è stato di 32.882€."
                 },
                 {
                     "title": "Categorie di azioni emesse dalla società",
                     "text": "Categorie di azioni emesse dalla società v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Le informazioni richieste dall'articolo 2427, comma 1 numero 17 del Codice Civile relativamente ai dati sulle azioni che compongono il capitale della società, al numero ed al valore nominale delle azioni sottoscritte nell'esercizio sono desumibili dai prospetti seguenti: Descrizione Consistenza iniziale, numero Consistenza iniziale, valore nominale Consistenza finale, numero Consistenza finale, valore nominale ORDINARIE 3.096 1.000 3.096 1.000 Totale 3.096 1.000 3.096 1.000",
-                    "summary": "Summarization failed or empty."
+                    "summary": null
                 },
                 {
                     "title": "Titoli emessi dalla società",
                     "text": "Titoli emessi dalla società La Società non ha emesso titoli ai sensi dell'articolo 2427, comma 1 numero 18 del Codice Civile.",
-                    "summary": "Summarization failed or empty."
+                    "summary": "La società non ha emesso titoli."
                 },
                 {
                     "title": "Dettagli sugli altri strumenti finanziari emessi dalla società",
                     "text": "Strumenti finanziari La Società non ha emesso strumenti finanziari ai sensi dell'articolo 2427, comma 1 numero 19 del Codice Civile.",
-                    "summary": "Summarization failed or empty."
+                    "summary": "La società non ha emesso strumenti finanziari."
                 }
             ]
         },
         "Sub-section-2": {
             "original_descriptive_title": "Impegni, garanzie e passività potenziali non risultanti dallo stato patrimoniale / Informazioni sui patrimoni e i finanziamenti destinati ad uno specifico affare (Part 1)",
-            "llm_section_title": "Impegni e passività potenziali",
+            "llm_section_title": "Impegni e garanzie potenziali",
             "components_breakdown": [
                 {
                     "title": "Impegni, garanzie e passività potenziali non risultanti dallo stato patrimoniale",
@@ -695,23 +695,23 @@
         },
         "Sub-section-3": {
             "original_descriptive_title": "Impegni, garanzie e passività potenziali non risultanti dallo stato patrimoniale / Informazioni sui patrimoni e i finanziamenti destinati ad uno specifico affare / Informazioni su patrimoni e finanziamenti destinati ad uno specifico affare / Informazioni sulle operazioni con parti correlate / Informazioni sugli accordi non risultanti dallo stato patrimoniale / Informazioni sui fatti di rilievo avvenuti dopo la chiusura dell'esercizio / Informazioni relative agli strumenti finanziari derivati ex art. 2427-bis del Codice Civile / Prospetto riepilogativo del bilancio della società che esercita l'attività di direzione e coordinamento / Operazioni con parti correlate",
-            "llm_section_title": "Rischi e prospettive",
+            "llm_section_title": "Relazioni con parti correlate e consolidamento",
             "components_breakdown": [
                 {
                     "title": "Informazioni su patrimoni e finanziamenti destinati ad uno specifico affare",
                     "text": "Non sussistono patrimoni destinati ad uno specifico affare, ai sensi dell'art. 2447 bis del Codice Civile.",
-                    "summary": "Summarization failed or empty."
+                    "summary": "Non sussistono patrimoni destinati ad uno specifico affare."
                 },
                 {
                     "title": "Operazioni con parti correlate",
                     "text": "Vengono di seguito riportate le informazioni concernenti le operazioni realizzate con parti correlate, ai sensi dell'art. 2427, comma 1 numero 22-bis del codice civile: Parte correlata Natura del rapporto Crediti commerciali Crediti finanziari Debiti commerciali ELMA SRL CONTROLLATA 336.664 0 139 GOLLINUCCI SRL CONTROLLATA 31.893 0 393.529 IFB SRL CONTROLLANTE 0 640.110 0 CLAN IMMOBILIARE SRL CONSOCIATA 69.560 0 0 Ricavi vendite e prestazioni Costi materie prime, merci, ecc. Proventi / (Oneri) finanziari 755.255 259 0 50.417 330.795 0 0 0 30.082 0 1.416.716 0 In particolare, nel rispetto delle disposizioni di legge, tutte le operazioni intervenute nel corso dell’esercizio con le parti correlate hanno dato luogo a rapporti di natura commerciale e finanziaria che, per natura ed oggetto, non sono state considerate estranee al normale corso degli affari della società, non hanno presentato particolari elementi di criticità, sono state realizzate a condizioni economiche equivalenti a quelle di mercato praticate nei confronti di parti non correlate di corrispondente natura e rischio, ovvero, in mancanza di riferimento, a condizioni di reciproca convenienza verificata tenendo conto del complesso delle circostanze, delle caratteristiche peculiari dell’operazione e dell’interesse economico delle singole società Le operazioni commerciali e finanziarie tra le società sono avvenute a normali condizioni di mercato. Si ricorda che Volpato Industrie S.p.A. ha la direzione e coordinamento nei confronti della Elma S.r.l., e dal 2024 di Gollinucci S.r.l. ed è soggetta alla predisposizione del bilancio consolidato con la stessa società controllata, oltre che v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 dall'esercizio 2024 con la società Gollinucci S.r.l.. La società I.F.B. S.r.l. detiene a sua volta la direzione e coordinamento della Volpato Industrie S.p.A. e provvede al consolidamento del sub consolidato del Gruppo Volpato Volpato Industrie S.p.A..",
-                    "summary": "Le operazioni con parti correlate sono state realizzate a condizioni economiche equivalenti a quelle di mercato e non hanno presentato particolari elementi di criticità. Le società sono state trattate a normali condizioni di mercato e non ci sono stati elementi di criticità nelle operazioni commerciali e finanziarie tra le società."
+                    "summary": "Le operazioni con parti correlate hanno avuto luogo a condizioni economiche equivalenti a quelle di mercato e non hanno presentato particolari elementi di criticità. Le società sono state gestite in modo separato e le operazioni sono state realizzate a normali condizioni di mercato."
                 }
             ]
         },
         "Sub-section-4": {
             "original_descriptive_title": "Informazioni sulle operazioni con parti correlate / Informazioni sugli accordi non risultanti dallo stato patrimoniale / Informazioni sui fatti di rilievo avvenuti dopo la chiusura dell'esercizio / Informazioni relative agli strumenti finanziari derivati ex art. 2427-bis del Codice Civile / Prospetto riepilogativo del bilancio della società che esercita l'attività di direzione e coordinamento / Accordi non risultanti dallo stato patrimoniale",
-            "llm_section_title": "Informazioni qualitative sulla salute finanziaria",
+            "llm_section_title": "Rischi e prospettive finanziarie",
             "components_breakdown": [
                 {
                     "title": "Accordi non risultanti dallo stato patrimoniale",
@@ -721,12 +721,12 @@
                 {
                     "title": "Fatti di rilievo avvenuti dopo la chiusura dell'esercizio",
                     "text": "Non sono intervenuti fatti di rilievo avvenuti dopo la chiusura dell’esercizio, ai sensi dell'articolo 2427, comma 1 numero 22-quater del Codice Civile che possano avere impatti sul bilancio 2024. Imprese che redigono il bilancio dell'insieme più grande/più piccolo di imprese di cui si fa parte in quanto controllata Nome e sede legale delle imprese che redigono il bilancio consolidato dell'insieme più grande/più piccolo di imprese di cui si fa parte Ai sensi dell'articolo 2427, comma 1 numero 22 quinqies e 22 sexies del Codice Civile la società IFB S.r.l. con sede legale in San Donà di Piave (VE), come infra descritta, predispone il bilancio consolidato del Gruppo IFB.",
-                    "summary": "Non sono intervenuti fatti di rilievo avvenuti dopo la chiusura dell’esercizio che possano avere impatti sul bilancio 2024. La società predispone il bilancio consolidato del Gruppo IFB."
+                    "summary": "Summarization failed or empty."
                 },
                 {
                     "title": "Strumenti finanziari derivati",
                     "text": "Ai sensi dell’art. 2427 bis, comma 1, punto 1 del Codice Civile, la Società ha in essere strumenti finanziari derivati di copertura dal rischio tasso (IRS) con le caratteristiche seguenti: - controparte BNP Paribas, nozionale al 31.12.24 pari ad € 1.500.000; - controparte BPM, nozionale al 31.12.24 pari ad € 890.406; - controparte Credit Agricole, nozionale al 31.12.24 pari ad € 9.900.000. Per i dettagli sulla variazione intervenuta nella valutazione del c.d. mark to market si rinvia ad altra parte della presente Nota Integrativa. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04 Informazioni sulle società o enti che esercitano attività di direzione e coordinamento - art. 2497 bis del Codice Civile La società è soggetta a direzione o coordinamento, da parte della società IFB S.r.l. con sede in San Donà di Piave (VE), Via Trento n. 16, capitale sociale di Euro 100.000, P.IVA, Codice Fiscale e numero d'iscrizione del Registro Imprese di Venezia Rovigo: 02984590279, numero R.E.A. VE-271217. Ai sensi dell’articolo 2497 bis, comma 4 del Codice Civile, vengono di seguito esposti i dati essenziali dell'ultimo bilancio approvato della società che esercita l'attività di direzione e coordinamento.",
-                    "summary": "La Società ha in essere strumenti finanziari derivati di copertura dal rischio tasso (IRS) con controparti BNP Paribas, BPM e Credit Agricole. La valutazione del c.d. mark to market è riportata in altra parte della Nota Integrativa."
+                    "summary": "La società ha in essere strumenti finanziari derivati di copertura dal rischio tasso (IRS) con controparti BNP Paribas, BPM e Credit Agricole. La variazione intervenuta nella valutazione del c.d. mark to market è riportata in altra parte della Nota Integrativa."
                 }
             ]
         }
@@ -734,12 +734,12 @@
     "Prospetto riepilogativo dello stato patrimoniale della società che esercita l'attività di direzione e coordinamento": {
         "Sub-section-1": {
             "original_descriptive_title": "Prospetto riepilogativo dello stato patrimoniale della società che esercita l'attività di direzione e coordinamento",
-            "llm_section_title": "Sub-section-1 Placeholder",
+            "llm_section_title": "Situazione patrimoniale",
             "components_breakdown": [
                 {
                     "title": "Prospetto riepilogativo dello stato patrimoniale della società che esercita l'attività di direzione e coordinamento",
                     "text": "Ultimo esercizio Esercizio precedente Data dell'ultimo bilancio approvato 31/12/2023 31/12/2022 A) Crediti verso soci per versamenti ancora dovuti 0 0 B) Immobilizzazioni 13.964.848 12.950.451 C) Attivo circolante 2.680.962 3.852.425 D) Ratei e risconti attivi 16.111 23.017 Totale attivo 16.661.921 16.825.893 A) Patrimonio netto Capitale sociale 201.000 201.000 Riserve 7.614.596 7.096.321 Utile (perdita) dell'esercizio (56.242) 518.275 Totale patrimonio netto 7.759.354 7.815.596 B) Fondi per rischi e oneri 280.201 280.201 C) Trattamento di fine rapporto di lavoro subordinato 0 0 D) Debiti 8.622.366 8.730.096 E) Ratei e risconti passivi 0 0 Totale passivo 16.661.921 16.825.893",
-                    "summary": "Nessun riassunto generato da LLM."
+                    "summary": "Summarization failed or empty."
                 }
             ]
         }
@@ -747,12 +747,12 @@
     "Prospetto riepilogativo del conto economico della società che esercita l'attività di direzione e coordinamento": {
         "Sub-section-1": {
             "original_descriptive_title": "Prospetto riepilogativo del conto economico della società che esercita l'attività di direzione e coordinamento / Informazioni ex art. 1, comma 125, della legge 4 agosto 2017 n. 124",
-            "llm_section_title": "Salute finanziaria dell'azienda",
+            "llm_section_title": "Dati economici e finanziari",
             "components_breakdown": [
                 {
                     "title": "Prospetto riepilogativo del conto economico della società che esercita l'attività di direzione e coordinamento",
                     "text": "Ultimo esercizio Esercizio precedente Data dell'ultimo bilancio approvato 31/12/2023 31/12/2022 A) Valore della produzione 24.456 1.127.318 B) Costi della produzione 86.451 316.452 C) Proventi e oneri finanziari (801) (41.693) Imposte sul reddito dell'esercizio (6.554) 250.898 Utile (perdita) dell'esercizio (56.242) 518.275",
-                    "summary": "Summarization failed or empty."
+                    "summary": "L'azienda ha registrato un utile di 518.275 euro nell'esercizio precedente, ma un utile negativo di 56.242 euro nell'ultimo esercizio. I proventi e oneri finanziari sono stati negativi (-801) euro nell'ultimo esercizio."
                 },
                 {
                     "title": "Informazioni ex art. 1, comma 125, della legge 4 agosto 2017 n. 124",
@@ -765,12 +765,12 @@
     "Proposta di destinazione degli utili o di copertura delle perdite": {
         "Sub-section-1": {
             "original_descriptive_title": "Proposta di destinazione degli utili o di copertura delle perdite",
-            "llm_section_title": "Politiche gestionali e ESG",
+            "llm_section_title": "Destinazione degli utili e politiche ESG",
             "components_breakdown": [
                 {
                     "title": "Proposta di destinazione degli utili o di copertura delle perdite",
                     "text": "Destinazione del risultato d'esercizio Ai sensi dell'art. 2427, comma 1 numero 22-septies del Codice Civile, si propone la destinazione del risultato d’ esercizio come segue: Risultato di esercizio 2024 euro 2.695.780 euro a riserva straordinaria euro 2.695.780 Di identificare il vincolo di indisponibilità a valere sulla riserva ex art. 45, c.3-octies del DL n. 73/2022 in € 41.464. Informazioni su tematiche ESG L’impresa dichiara di avere introdotto, tra le procedure interne, una politica di approvvigionamento, di materie prime, trasporti e forniture energetiche, che integri considerazioni di carattere ambientale. L’impresa, inoltre, dichiara di avere dedicato lo 0,012% del fatturato annuale ad attività di sostegno della comunità, per un ammontare pari ad Euro 7.300,00. v.2.14.2 VOLPATO INDUSTRIE S.P.A. Bilancio di esercizio al 31-12-2024 Generato automaticamente - Conforme alla tassonomia itcc-ci-2018-11-04",
-                    "summary": "L'azienda propone di destinare l'intero risultato d'esercizio 2024 a riserva straordinaria. Inoltre, l'azienda ha introdotto una politica di approvvigionamento che integri considerazioni ambientali e ha dedicato lo 0,012% del fatturato ad attività di sostegno della comunità."
+                    "summary": "L'azienda destina il risultato di esercizio 2024 di 2.695.780 euro a riserva straordinaria. L'azienda ha introdotto una politica di approvvigionamento che integra considerazioni ambientali e ha dedicato lo 0,012% del fatturato annuale ad attività di sostegno della comunità."
                 }
             ]
         }
