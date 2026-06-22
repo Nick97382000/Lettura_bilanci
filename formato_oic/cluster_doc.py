@@ -3,13 +3,11 @@ import pandas as pd
 import re
 import fitz
 
-# New class to hold content string and its original DataFrame chunk
-import pandas as pd
-
 class LeafContent:
-    def __init__(self, content_string, df_chunk):
+    def __init__(self, content_string, df_chunk, components=None):
         self.content_string = content_string
         self.df_chunk = df_chunk
+        self.components = components if components is not None else []
 
     def __len__(self):
         return len(self.content_string)
@@ -18,10 +16,18 @@ class LeafContent:
         return self.content_string
 
 def clean_page_numbers_from_title(title_text):
-    pattern = r'\b(pag\.?|page)\s*\d+\s*(di|of)\s*\d+\b'
+    pattern = r'\b(pag\.?:?|page)\s*\d+\s*(di|of)?\s*\d*\b'
     cleaned_title = re.sub(pattern, '', title_text, flags=re.IGNORECASE).strip()
     cleaned_title = re.sub(r'\s+', ' ', cleaned_title).strip()
     return cleaned_title
+
+def is_valid_title(title_text):
+    text = title_text.strip()
+    if not text: return False
+    if len(text) <= 1: return False
+    if text.isdigit(): return False
+    if len(re.sub(r'[^a-zA-Z0-9]', '', text)) < 2: return False
+    return True
 
 def extract_text_with_styles_pymupdf(pdf_path):
     all_text_info = []
@@ -56,12 +62,10 @@ def identify_main_sections_meta(text_df, title_size_threshold_multiplier=1.6, po
     median_body_font_size = pd.Series(common_sizes).median() if common_sizes else text_df['size'].median()
     primary_threshold = median_body_font_size * title_size_threshold_multiplier
     positional_threshold = median_body_font_size * positional_title_size_threshold_multiplier
-
     potential_title_blocks = []
     temp_buffer = []
     start_idx = -1
     previous_page = -1
-
     for i, row in text_df.iterrows():
         is_candidate = (row['size'] > primary_threshold) or (row['page'] != previous_page and row['y0'] < y0_page_top_threshold and row['size'] > positional_threshold)
         previous_page = row['page']
@@ -71,14 +75,12 @@ def identify_main_sections_meta(text_df, title_size_threshold_multiplier=1.6, po
         else:
             if temp_buffer:
                 full_t = " ".join(temp_buffer).strip()
-                if len(full_t) < 120:
+                if len(full_t) < 120 and is_valid_title(full_t):
                     potential_title_blocks.append((start_idx, i - 1, full_t))
                 temp_buffer = []
-
     last_nota_idx = -1
     for s_idx, _, t_text in potential_title_blocks:
         if "nota" in t_text.lower(): last_nota_idx = s_idx
-
     sections_meta = []
     curr_t, curr_start = None, -1
     found_first = False
@@ -99,7 +101,6 @@ def _cluster_text_elements_by_font(df_to_cluster, median_body_font_size, title_m
     clusters = []
     curr_rows = []
     curr_title = "Initial Content"
-
     buffer = []
     for idx, row in df_to_cluster.iterrows():
         if row['size'] > threshold:
@@ -108,9 +109,10 @@ def _cluster_text_elements_by_font(df_to_cluster, median_body_font_size, title_m
             if buffer:
                 title_text = " ".join([r['text'] for r in buffer]).strip()
                 cleaned = clean_page_numbers_from_title(title_text)
-                if cleaned and len(cleaned) < 120:
+                if cleaned and len(cleaned) < 120 and is_valid_title(cleaned):
                     if curr_rows:
-                        clusters.append({'title': curr_title, 'df_slice': pd.DataFrame(curr_rows).reset_index(drop=True)})
+                        df_slice = pd.DataFrame(curr_rows).reset_index(drop=True)
+                        clusters.append({'title': curr_title, 'df_slice': df_slice, 'components': [{'title': curr_title, 'text': " ".join(df_slice['text'].astype(str))}]})
                     curr_title, curr_rows = cleaned, []
                 else:
                     curr_rows.extend(buffer)
@@ -119,26 +121,74 @@ def _cluster_text_elements_by_font(df_to_cluster, median_body_font_size, title_m
     if buffer:
         title_text = " ".join([r['text'] for r in buffer]).strip()
         cleaned = clean_page_numbers_from_title(title_text)
-        if cleaned and len(cleaned) < 120:
-            if curr_rows: clusters.append({'title': curr_title, 'df_slice': pd.DataFrame(curr_rows).reset_index(drop=True)})
-            clusters.append({'title': cleaned, 'df_slice': pd.DataFrame(buffer).reset_index(drop=True)})
-        else: curr_rows.extend(buffer)
+        if cleaned and len(cleaned) < 120 and is_valid_title(cleaned):
+            if curr_rows:
+                df_slice = pd.DataFrame(curr_rows).reset_index(drop=True)
+                clusters.append({'title': curr_title, 'df_slice': df_slice, 'components': [{'title': curr_title, 'text': " ".join(df_slice['text'].astype(str))}]})
+            df_slice_buf = pd.DataFrame(buffer).reset_index(drop=True)
+            clusters.append({'title': cleaned, 'df_slice': df_slice_buf, 'components': [{'title': cleaned, 'text': " ".join(df_slice_buf['text'].astype(str))}]})
+        else:
+            curr_rows.extend(buffer)
     if curr_rows:
-         clusters.append({'title': curr_title, 'df_slice': pd.DataFrame(curr_rows).reset_index(drop=True)})
+        df_slice = pd.DataFrame(curr_rows).reset_index(drop=True)
+        clusters.append({'title': curr_title, 'df_slice': df_slice, 'components': [{'title': curr_title, 'text': " ".join(df_slice['text'].astype(str))}]})
     return clusters
+
+def _subsection_content_length(subsection):
+    return len(" ".join(subsection['df_slice']['text'].astype(str)))
+
+def _merge_two_clusters(first, second):
+    if first['title'].endswith('Initial Content') and second['title'].endswith('Initial Content'):
+        title = first['title']
+    elif first['title'].endswith('Initial Content'):
+        title = second['title']
+    elif second['title'].endswith('Initial Content'):
+        title = first['title']
+    else:
+        title = f"{first['title']} / {second['title']}"
+    merged_df = pd.concat([first['df_slice'], second['df_slice']], ignore_index=True)
+    merged_comp = first['components'] + second['components']
+    return {'title': title, 'df_slice': merged_df, 'components': merged_comp}
+
+def _merge_short_subsections(subsections, min_len=1000):
+    if not subsections: return []
+    merged_sections = list(subsections)
+    while True:
+        changed = False
+        normalized = []
+        i = 0
+        while i < len(merged_sections):
+            current = merged_sections[i]
+            if _subsection_content_length(current) >= min_len or len(merged_sections) == 1:
+                normalized.append(current)
+                i += 1
+                continue
+            if i < len(merged_sections) - 1:
+                merged_sections[i + 1] = _merge_two_clusters(current, merged_sections[i + 1])
+                changed = True
+                i += 1
+            elif normalized:
+                normalized.append(_merge_two_clusters(normalized.pop(), current))
+                changed = True
+                i += 1
+            else:
+                normalized.append(current)
+                i += 1
+        merged_sections = normalized
+        if not changed: break
+    return merged_sections
 
 def _split_large_subsection(clusters, parent_title, min_len=1000, max_len=2000):
     """
     Divide una sub-section molto grande (> 3000 caratteri) usando i cluster (titoli) come punti di rottura naturali.
     Tenta di mantenere i risultati nel range min_len-max_len.
-    Se necessario, crea più parti fino a 3 divisioni.
     """
     result_parts = []
     current_part_clusters = []
     current_part_length = 0
     part_counter = 1
     
-    for i, cluster in enumerate(clusters):
+    for cluster in clusters:
         cluster_len = len(" ".join(cluster['df_slice']['text'].astype(str)))
         
         # Se aggiungere questo cluster superherebbe max_len, e abbiamo già almeno min_len:
@@ -149,7 +199,10 @@ def _split_large_subsection(clusters, parent_title, min_len=1000, max_len=2000):
                 part_title = f"{parent_title} / {current_part_clusters[0]['title']}"
             
             part_df = pd.concat([c['df_slice'] for c in current_part_clusters], ignore_index=True)
-            result_parts.append({'title': part_title, 'df_slice': part_df})
+            part_comp = []
+            for c in current_part_clusters:
+                part_comp.extend(c['components'])
+            result_parts.append({'title': part_title, 'df_slice': part_df, 'components': part_comp})
             
             # Inizia una nuova parte
             current_part_clusters = [cluster]
@@ -167,28 +220,31 @@ def _split_large_subsection(clusters, parent_title, min_len=1000, max_len=2000):
             part_title = f"{parent_title} / {current_part_clusters[0]['title']}"
         
         part_df = pd.concat([c['df_slice'] for c in current_part_clusters], ignore_index=True)
-        result_parts.append({'title': part_title, 'df_slice': part_df})
+        part_comp = []
+        for c in current_part_clusters:
+            part_comp.extend(c['components'])
+        result_parts.append({'title': part_title, 'df_slice': part_df, 'components': part_comp})
     
-    return result_parts if result_parts else [{'title': parent_title, 'df_slice': pd.concat([c['df_slice'] for c in clusters], ignore_index=True)}]
+    return result_parts if result_parts else [{'title': parent_title, 'df_slice': pd.concat([c['df_slice'] for c in clusters], ignore_index=True), 'components': [item for c in clusters for item in c['components']]}]
 
 def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_font=11):
     if not subsections: return []
     
     max_hard_limit = 3000  # Limite massimo assoluto - oltre questo, split aggressivo è quasi obbligatorio
     
-    # 1. Merging Step
     merged = []
     for item in subsections:
-        content_str = " ".join(item['df_slice']['text'].astype(str))
-        if len(content_str) < min_len and merged:
+        if len(" ".join(item['df_slice']['text'].astype(str))) < min_len and merged:
             prev = merged[-1]
             if not item['title'].endswith('Initial Content'):
                 prev['title'] = f"{prev['title']} / {item['title']}"
             prev['df_slice'] = pd.concat([prev['df_slice'], item['df_slice']], ignore_index=True)
+            prev['components'].extend(item['components'])
         else:
+            if 'components' not in item:
+                txt = " ".join(item['df_slice']['text'].astype(str))
+                item['components'] = [{'title': item['title'], 'text': txt}]
             merged.append(item)
-
-    # 2. Splitting Step (One-level deep for large blocks)
     final_list = []
     for item in merged:
         content_str = " ".join(item['df_slice']['text'].astype(str))
@@ -200,54 +256,64 @@ def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_
                 parts = _split_large_subsection(internal_clusters, item['title'], min_len, max_len)
                 final_list.extend(parts)
             else:
-                # Se non ci sono cluster naturali, prova comunque uno split al punto medio
                 final_list.append(item)
         # Se è fra max_len (2000) e max_hard_limit (3000), fai split soft usando il punto medio
         elif len(content_str) > max_len:
-            internal_clusters = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
-            if len(internal_clusters) > 1:
-                mid_point = len(content_str) / 2
-                accumulated_len = 0
-                split_idx = 1
-                for i, c in enumerate(internal_clusters):
-                    accumulated_len += len(" ".join(c['df_slice']['text'].astype(str)))
-                    if accumulated_len > mid_point:
+            internal = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
+            if len(internal) > 1:
+                mid = len(content_str) / 2
+                acc, split_idx = 0, 1
+                for i, c in enumerate(internal):
+                    acc += len(" ".join(c['df_slice']['text'].astype(str)))
+                    if acc > mid:
                         split_idx = max(1, i)
                         break
-                
-                part1_title = f"{item['title']} (Part 1)"
-                part1_df = pd.concat([c['df_slice'] for c in internal_clusters[:split_idx]])
-                part2_title = f"{item['title']} / {internal_clusters[split_idx]['title']}"
-                part2_df = pd.concat([c['df_slice'] for c in internal_clusters[split_idx:]])
-                
-                final_list.append({'title': part1_title, 'df_slice': part1_df})
-                final_list.append({'title': part2_title, 'df_slice': part2_df})
-            else:
-                final_list.append(item)
-        else:
-            final_list.append(item)
-            
+                p1_df = pd.concat([c['df_slice'] for c in internal[:split_idx]], ignore_index=True)
+                p1_comp = []
+                for c in internal[:split_idx]: p1_comp.extend(c['components'])
+                final_list.append({'title': f"{item['title']} (Part 1)", 'df_slice': p1_df, 'components': p1_comp})
+                p2_title = f"{item['title']} / {internal[split_idx]['title']}"
+                p2_df = pd.concat([c['df_slice'] for c in internal[split_idx:]], ignore_index=True)
+                p2_comp = []
+                for c in internal[split_idx:]: p2_comp.extend(c['components'])
+                final_list.append({'title': p2_title, 'df_slice': p2_df, 'components': p2_comp})
+            else: final_list.append(item)
+        else: final_list.append(item)
     return final_list
 
-def process_to_two_levels(text_df, sections_meta, median_font):
-    output = {}
+def process_to_two_levels(text_df, sections_meta, median_font, min_subsection_len=1000):
+    main_sections = []
     for meta in sections_meta:
-        main_title = meta['title']
         chunk = text_df.loc[meta['start_idx']:meta['end_idx']].copy()
-        
-        # Get sub-candidates
         clusters = _cluster_text_elements_by_font(chunk, median_font, title_multiplier=1.15)
-        # Merge and split within the 1000-2000 range
         processed_subs = merge_and_split_subsections(clusters, min_len=1000, max_len=2000, median_font=median_font)
-        
-        output[main_title] = {}
-        for sub in processed_subs:
-            content_str = " ".join(sub['df_slice']['text'].astype(str))
-            output[main_title][sub['title']] = LeafContent(content_str, sub['df_slice'])
+        main_sections.append({'title': meta['title'], 'subs': processed_subs})
+    for main_section in main_sections: main_section['subs'] = _merge_short_subsections(main_section['subs'], min_subsection_len)
+    output = {}
+    for main_section in main_sections:
+        main_t = main_section['title']
+        output[main_t] = {}
+        for sub_idx, sub in enumerate(main_section['subs']):
+            output[main_t][f"Sub-section-{sub_idx + 1}"] = {
+                "original_descriptive_title": sub['title'],
+                "llm_section_title": f"Sub-section-{sub_idx + 1} Placeholder",
+                "components_breakdown": sub['components']
+            }
     return output
 
 def display_two_levels(data):
     for main_t, subs in data.items():
         print(f"\n{'='*60}\nMAIN SECTION: {main_t}\n{'='*60}")
-        for sub_t, leaf in subs.items():
-            print(f"  [SUB-SECTION]: {sub_t} (Length: {len(leaf)})")
+        for sub_t, leaf_dict in subs.items():
+            # Calcolo lunghezza totale basandoci sui componenti
+            total_c_len = sum(len(c.get('text', '')) for c in leaf_dict['components_breakdown'])
+            print(f"  [SUB-SECTION]: {sub_t} (Total Length: {total_c_len})")
+            # Optionally print original descriptive title if needed for debug
+            if 'original_descriptive_title' in leaf_dict:
+                print(f"    (Original Title: {leaf_dict['original_descriptive_title']})")
+            if 'components_breakdown' in leaf_dict and len(leaf_dict['components_breakdown']) > 1:
+                print("    --- Components Breakdown ---")
+                for i, comp in enumerate(leaf_dict['components_breakdown']):
+                    comp_len = len(comp.get('text', ''))
+                    print(f"      [{i+1}] Title: {comp['title']} (Length: {comp_len})")
+                print("    --------------------------")
