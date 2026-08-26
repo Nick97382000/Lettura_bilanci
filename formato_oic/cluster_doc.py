@@ -178,10 +178,11 @@ def _merge_short_subsections(subsections, min_len=1000):
         if not changed: break
     return merged_sections
 
+
 def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
     """
     Divide ricorsivamente un item in blocchi di circa target_len basandosi sui punti fermi.
-    Garantisce che ogni pezzo sia almeno min_len.
+    Gestisce la persistenza e il rinomino dei componenti divisi.
     """
     full_text = " ".join(item['df_slice']['text'].astype(str))
     total_len = len(full_text)
@@ -189,21 +190,17 @@ def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
     if total_len <= target_len + min_len:
         return [item]
         
-    # Trova tutti i punti fermi seguiti da spazio o fine riga
     matches = list(re.finditer(r'\.\s', full_text))
     if not matches:
         return [item]
         
-    # Trova il punto migliore vicino al target_len
     best_match = None
     for m in matches:
-        if m.end() >= min_len and m.end() <= target_len + 500: # tolleranza di 500ch
+        if m.end() >= min_len and m.end() <= target_len + 500:
             best_match = m
-        if m.end() > target_len:
-            break
+        if m.end() > target_len: break
             
     if not best_match:
-        # Se non trovo un punto ideale, prendo il primo disponibile dopo min_len
         for m in matches:
             if m.end() >= min_len:
                 best_match = m
@@ -213,12 +210,8 @@ def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
         return [item]
 
     split_pos = best_match.end()
-    
-    # Mapping approssimativo del testo al DataFrame slice
-    # Nota: per precisione millimetrica servirebbe calcolare le lunghezze cumulate delle righe
     df = item['df_slice']
     lengths = df['text'].astype(str).str.len().cumsum()
-    # Trova l'indice della riga dove avviene lo split
     split_row_idx = (lengths <= split_pos).sum()
     
     p1_df = df.iloc[:split_row_idx].copy()
@@ -226,16 +219,19 @@ def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
     
     if p1_df.empty or p2_df.empty: return [item]
 
+    # Logica per mantenere e rinominare i componenti (titles)
+    original_comp_title = item['components'][0]['title'] if item.get('components') else item['title']
+    
     part1 = {
         'title': f"{item['title']} (Part)",
         'df_slice': p1_df,
-        'components': [{'title': item['title'], 'text': " ".join(p1_df['text'].astype(str))}]
+        'components': [{'title': f"{original_comp_title} - Part 1", 'text': " ".join(p1_df['text'].astype(str))}]
     }
     
     remaining_item = {
         'title': item['title'],
         'df_slice': p2_df,
-        'components': [{'title': item['title'], 'text': " ".join(p2_df['text'].astype(str))}]
+        'components': [{'title': f"{original_comp_title} - Part 2", 'text': " ".join(p2_df['text'].astype(str))}]
     }
     
     return [part1] + _split_text_by_sentence_recursive(remaining_item, min_len, target_len)
@@ -270,24 +266,21 @@ def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_
             final_list.append(item)
             continue
 
-        # Tenta split per titoli
-        internal = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
+        internal = cld._cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
         
         if len(internal) > 1:
-            parts = _split_large_subsection(internal, item['title'], min_len, max_len)
+            # Nota: _split_large_subsection deve essere definita nel modulo cld
+            parts = cld._split_large_subsection(internal, item['title'], min_len, max_len)
             for p in parts:
                 p_len = len(" ".join(p['df_slice']['text'].astype(str)))
                 if p_len > 3000:
-                    # Se dopo lo split per titoli è ancora > 3000, applica split per frasi
                     final_list.extend(_split_text_by_sentence_recursive(p, min_len, max_len))
                 else:
                     final_list.append(p)
         else:
-            # Nessun titolo, split diretto per frasi
             final_list.extend(_split_text_by_sentence_recursive(item, min_len, max_len))
 
     return final_list
-
 
 def process_to_two_levels(text_df, sections_meta, median_font, min_subsection_len=1000):
     main_sections = []
