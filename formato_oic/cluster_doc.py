@@ -271,7 +271,7 @@ def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_
             continue
 
         # Tenta split per titoli
-        internal = cld._cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
+        internal = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
         
         if len(internal) > 1:
             parts = _split_large_subsection(internal, item['title'], min_len, max_len)
