@@ -178,23 +178,24 @@ def _merge_short_subsections(subsections, min_len=1000):
         if not changed: break
     return merged_sections
 
-
-import pandas as pd
-import re
-
 def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
     """
     Divide ricorsivamente un item in blocchi di circa target_len basandosi sui punti fermi.
-    Gestisce la persistenza e il rinomino dei componenti divisi.
+    Assicura che ogni frammento abbia una lista di componenti con titoli 'Part 1', 'Part 2' ecc.
     """
     full_text = " ".join(item['df_slice']['text'].astype(str))
     total_len = len(full_text)
 
     if total_len <= target_len + min_len:
+        # Se non c'è bisogno di split, assicuriamoci che i componenti siano inizializzati
+        if 'components' not in item or not item['components']:
+            item['components'] = [{'title': item['title'], 'text': full_text}]
         return [item]
 
     matches = list(re.finditer(r'\.\s', full_text))
     if not matches:
+        if 'components' not in item or not item['components']:
+            item['components'] = [{'title': item['title'], 'text': full_text}]
         return [item]
 
     best_match = None
@@ -210,6 +211,8 @@ def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
                 break
 
     if not best_match or (total_len - best_match.end()) < min_len:
+        if 'components' not in item or not item['components']:
+            item['components'] = [{'title': item['title'], 'text': full_text}]
         return [item]
 
     split_pos = best_match.end()
@@ -220,23 +223,27 @@ def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
     p1_df = df.iloc[:split_row_idx].copy()
     p2_df = df.iloc[split_row_idx:].copy()
 
-    if p1_df.empty or p2_df.empty: return [item]
+    if p1_df.empty or p2_df.empty: 
+        return [item]
 
-    # Gestione titoli: evitiamo "Title - Part 1 - Part 1"
-    base_title = item['components'][0]['title'].split(' - Part')[0] if item.get('components') else item['title']
-
+    # Gestione titoli componenti: estraiamo il titolo pulito
+    # Se l'item originale era già un'unione di titoli, cerchiamo di non duplicarli troppo
+    clean_title = item['title'].split(' (Part')[0]
+    
     part1 = {
         'title': f"{item['title']} (Part)",
         'df_slice': p1_df,
-        'components': [{'title': f"{base_title} - Part 1", 'text': " ".join(p1_df['text'].astype(str))}]
+        'components': [{'title': f"{clean_title} - Part 1", 'text': " ".join(p1_df['text'].astype(str))}]
     }
-
+    
+    # Per la parte rimanente, usiamo Part 2 nel titolo componente
     remaining_item = {
         'title': item['title'],
         'df_slice': p2_df,
-        'components': [{'title': f"{base_title} - Part 2", 'text': " ".join(p2_df['text'].astype(str))}]
+        'components': [{'title': f"{clean_title} - Part 2", 'text': " ".join(p2_df['text'].astype(str))}]
     }
 
+    # Proseguiamo ricorsivamente sulla parte rimanente
     return [part1] + _split_text_by_sentence_recursive(remaining_item, min_len, target_len)
 
 def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_font=11):
@@ -251,15 +258,18 @@ def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_
             if not item['title'].endswith('Initial Content'):
                 prev['title'] = f"{prev['title']} / {item['title']}"
             prev['df_slice'] = pd.concat([prev['df_slice'], item['df_slice']], ignore_index=True)
-            if 'components' not in item:
-                item['components'] = [{'title': item['title'], 'text': " ".join(item['df_slice']['text'].astype(str))}]
-            prev['components'].extend(item['components'])
+            
+            # Aggiungiamo il nuovo componente alla lista esistente
+            new_comp = {'title': item['title'], 'text': " ".join(item['df_slice']['text'].astype(str))}
+            if 'components' not in prev: prev['components'] = []
+            prev['components'].append(new_comp)
         else:
+            # Inizializziamo sempre la lista dei componenti per coerenza
             if 'components' not in item:
                 item['components'] = [{'title': item['title'], 'text': " ".join(item['df_slice']['text'].astype(str))}]
             merged.append(item)
 
-    # 2. Splitting delle sezioni troppo lunghe
+    # 2. Splitting delle sezioni troppo lunghe (> 2000 ch)
     final_list = []
     for item in merged:
         content_str = " ".join(item['df_slice']['text'].astype(str))
@@ -273,16 +283,20 @@ def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_
         internal = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
         
         if len(internal) > 1:
-            # Split "soft" basato sulla struttura dei sottotitoli
+            # Split "soft" basato sulla struttura dei sottotitoli interni
             parts = _split_large_subsection(internal, item['title'], min_len, max_len)
             for p in parts:
                 p_str = " ".join(p['df_slice']['text'].astype(str))
+                # Se anche dopo lo split strutturale un blocco è > 3000, applichiamo lo split per frasi
                 if len(p_str) > 3000:
                     final_list.extend(_split_text_by_sentence_recursive(p, min_len, max_len))
                 else:
+                    # Assicuriamoci che abbia i componenti per il breakdown
+                    if 'components' not in p or not p['components']:
+                        p['components'] = [{'title': p['title'], 'text': p_str}]
                     final_list.append(p)
         else:
-            # Se è un blocco unico enorme, split ricorsivo per frasi
+            # Blocco monolitico troppo grande: split ricorsivo per frasi
             final_list.extend(_split_text_by_sentence_recursive(item, min_len, max_len))
 
     return final_list
