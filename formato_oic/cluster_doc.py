@@ -177,7 +177,6 @@ def _merge_short_subsections(subsections, min_len=1000):
         merged_sections = normalized
         if not changed: break
     return merged_sections
-
 def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
     """
     Divide ricorsivamente un item in blocchi di circa target_len basandosi sui punti fermi.
@@ -187,7 +186,6 @@ def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
     total_len = len(full_text)
 
     if total_len <= target_len + min_len:
-        # Se non c'è bisogno di split, assicuriamoci che i componenti siano inizializzati
         if 'components' not in item or not item['components']:
             item['components'] = [{'title': item['title'], 'text': full_text}]
         return [item]
@@ -223,11 +221,8 @@ def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
     p1_df = df.iloc[:split_row_idx].copy()
     p2_df = df.iloc[split_row_idx:].copy()
 
-    if p1_df.empty or p2_df.empty: 
-        return [item]
+    if p1_df.empty or p2_df.empty: return [item]
 
-    # Gestione titoli componenti: estraiamo il titolo pulito
-    # Se l'item originale era già un'unione di titoli, cerchiamo di non duplicarli troppo
     clean_title = item['title'].split(' (Part')[0]
     
     part1 = {
@@ -236,40 +231,45 @@ def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
         'components': [{'title': f"{clean_title} - Part 1", 'text': " ".join(p1_df['text'].astype(str))}]
     }
     
-    # Per la parte rimanente, usiamo Part 2 nel titolo componente
     remaining_item = {
         'title': item['title'],
         'df_slice': p2_df,
         'components': [{'title': f"{clean_title} - Part 2", 'text': " ".join(p2_df['text'].astype(str))}]
     }
 
-    # Proseguiamo ricorsivamente sulla parte rimanente
     return [part1] + _split_text_by_sentence_recursive(remaining_item, min_len, target_len)
 
 def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_font=11):
     if not subsections: return []
 
-    # 1. Unione sezioni troppo corte
+    # 1. Unione sezioni troppo corte con limite di sicurezza a 3000 caratteri
     merged = []
     for item in subsections:
-        content_len = len(" ".join(item['df_slice']['text'].astype(str)))
-        if content_len < min_len and merged:
+        item_text = " ".join(item['df_slice']['text'].astype(str))
+        item_len = len(item_text)
+        
+        if merged:
             prev = merged[-1]
-            if not item['title'].endswith('Initial Content'):
-                prev['title'] = f"{prev['title']} / {item['title']}"
-            prev['df_slice'] = pd.concat([prev['df_slice'], item['df_slice']], ignore_index=True)
+            prev_text = " ".join(prev['df_slice']['text'].astype(str))
+            combined_len = len(prev_text) + item_len
             
-            # Aggiungiamo il nuovo componente alla lista esistente
-            new_comp = {'title': item['title'], 'text': " ".join(item['df_slice']['text'].astype(str))}
-            if 'components' not in prev: prev['components'] = []
-            prev['components'].append(new_comp)
-        else:
-            # Inizializziamo sempre la lista dei componenti per coerenza
-            if 'components' not in item:
-                item['components'] = [{'title': item['title'], 'text': " ".join(item['df_slice']['text'].astype(str))}]
-            merged.append(item)
+            # Se la sezione precedente è corta E l'unione non supera i 3000 caratteri
+            if len(prev_text) < min_len and combined_len <= 3000:
+                if not item['title'].endswith('Initial Content'):
+                    prev['title'] = f"{prev['title']} / {item['title']}"
+                prev['df_slice'] = pd.concat([prev['df_slice'], item['df_slice']], ignore_index=True)
+                
+                new_comp = {'title': item['title'], 'text': item_text}
+                if 'components' not in prev: prev['components'] = []
+                prev['components'].append(new_comp)
+                continue
 
-    # 2. Splitting delle sezioni troppo lunghe (> 2000 ch)
+        # Se non può essere unito (o perché prev è già lungo o perché l'unione eccede 3000)
+        if 'components' not in item:
+            item['components'] = [{'title': item['title'], 'text': item_text}]
+        merged.append(item)
+
+    # 2. Splitting delle sezioni che risultano ancora troppo lunghe (> max_len)
     final_list = []
     for item in merged:
         content_str = " ".join(item['df_slice']['text'].astype(str))
@@ -279,24 +279,21 @@ def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_
             final_list.append(item)
             continue
 
-        # Proviamo prima lo split basato sui cluster (titoli interni)
-        internal = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
+        # Prova split strutturale basato su font/titoli
+        internal = cld._cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
         
         if len(internal) > 1:
-            # Split "soft" basato sulla struttura dei sottotitoli interni
-            parts = _split_large_subsection(internal, item['title'], min_len, max_len)
+            parts = cld._split_large_subsection(internal, item['title'], min_len, max_len)
             for p in parts:
                 p_str = " ".join(p['df_slice']['text'].astype(str))
-                # Se anche dopo lo split strutturale un blocco è > 3000, applichiamo lo split per frasi
-                if len(p_str) > 3000:
+                if len(p_str) > 3000: # Se ancora troppo grande dopo split strutturale
                     final_list.extend(_split_text_by_sentence_recursive(p, min_len, max_len))
                 else:
-                    # Assicuriamoci che abbia i componenti per il breakdown
                     if 'components' not in p or not p['components']:
                         p['components'] = [{'title': p['title'], 'text': p_str}]
                     final_list.append(p)
         else:
-            # Blocco monolitico troppo grande: split ricorsivo per frasi
+            # Split ricorsivo per frasi per blocchi monolitici
             final_list.extend(_split_text_by_sentence_recursive(item, min_len, max_len))
 
     return final_list
