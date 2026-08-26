@@ -280,10 +280,10 @@ def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_
             continue
 
         # Prova split strutturale basato su font/titoli
-        internal = cld._cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
+        internal = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
         
         if len(internal) > 1:
-            parts = cld._split_large_subsection(internal, item['title'], min_len, max_len)
+            parts = _split_large_subsection(internal, item['title'], min_len, max_len)
             for p in parts:
                 p_str = " ".join(p['df_slice']['text'].astype(str))
                 if len(p_str) > 3000: # Se ancora troppo grande dopo split strutturale
