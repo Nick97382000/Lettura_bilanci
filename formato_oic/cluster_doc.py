@@ -266,7 +266,7 @@ def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_
             final_list.append(item)
             continue
 
-        internal = cld._cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
+        internal = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
         
         if len(internal) > 1:
             # Nota: _split_large_subsection deve essere definita nel modulo cld
