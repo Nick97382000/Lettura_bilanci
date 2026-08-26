@@ -178,109 +178,116 @@ def _merge_short_subsections(subsections, min_len=1000):
         if not changed: break
     return merged_sections
 
+def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
+    """
+    Divide ricorsivamente un item in blocchi di circa target_len basandosi sui punti fermi.
+    Garantisce che ogni pezzo sia almeno min_len.
+    """
+    full_text = " ".join(item['df_slice']['text'].astype(str))
+    total_len = len(full_text)
+    
+    if total_len <= target_len + min_len:
+        return [item]
+        
+    # Trova tutti i punti fermi seguiti da spazio o fine riga
+    matches = list(re.finditer(r'\.\s', full_text))
+    if not matches:
+        return [item]
+        
+    # Trova il punto migliore vicino al target_len
+    best_match = None
+    for m in matches:
+        if m.end() >= min_len and m.end() <= target_len + 500: # tolleranza di 500ch
+            best_match = m
+        if m.end() > target_len:
+            break
+            
+    if not best_match:
+        # Se non trovo un punto ideale, prendo il primo disponibile dopo min_len
+        for m in matches:
+            if m.end() >= min_len:
+                best_match = m
+                break
 
-def _split_large_subsection(clusters, parent_title, min_len=1000, max_len=2000):
-    """
-    Divide una sub-section molto grande (> 3000 caratteri) usando i cluster (titoli) come punti di rottura naturali.
-    Tenta di mantenere i risultati nel range min_len-max_len.
-    """
-    result_parts = []
-    current_part_clusters = []
-    current_part_length = 0
-    part_counter = 1
+    if not best_match or (total_len - best_match.end()) < min_len:
+        return [item]
+
+    split_pos = best_match.end()
     
-    for cluster in clusters:
-        cluster_len = len(" ".join(cluster['df_slice']['text'].astype(str)))
-        
-        # Se aggiungere questo cluster superherebbe max_len, e abbiamo già almeno min_len:
-        if current_part_length + cluster_len > max_len and current_part_length >= min_len and current_part_clusters:
-            # Salva la parte corrente
-            part_title = f"{parent_title} (Part {part_counter})"
-            if current_part_clusters[0].get('title') and not current_part_clusters[0]['title'].startswith('Initial'):
-                part_title = f"{parent_title} / {current_part_clusters[0]['title']}"
-            
-            part_df = pd.concat([c['df_slice'] for c in current_part_clusters], ignore_index=True)
-            part_comp = []
-            for c in current_part_clusters:
-                part_comp.extend(c['components'])
-            result_parts.append({'title': part_title, 'df_slice': part_df, 'components': part_comp})
-            
-            # Inizia una nuova parte
-            current_part_clusters = [cluster]
-            current_part_length = cluster_len
-            part_counter += 1
-        else:
-            # Aggiungi il cluster alla parte corrente
-            current_part_clusters.append(cluster)
-            current_part_length += cluster_len
+    # Mapping approssimativo del testo al DataFrame slice
+    # Nota: per precisione millimetrica servirebbe calcolare le lunghezze cumulate delle righe
+    df = item['df_slice']
+    lengths = df['text'].astype(str).str.len().cumsum()
+    # Trova l'indice della riga dove avviene lo split
+    split_row_idx = (lengths <= split_pos).sum()
     
-    # Aggiungi l'ultima parte
-    if current_part_clusters:
-        part_title = f"{parent_title} (Part {part_counter})"
-        if current_part_clusters[0].get('title') and not current_part_clusters[0]['title'].startswith('Initial'):
-            part_title = f"{parent_title} / {current_part_clusters[0]['title']}"
-        
-        part_df = pd.concat([c['df_slice'] for c in current_part_clusters], ignore_index=True)
-        part_comp = []
-        for c in current_part_clusters:
-            part_comp.extend(c['components'])
-        result_parts.append({'title': part_title, 'df_slice': part_df, 'components': part_comp})
+    p1_df = df.iloc[:split_row_idx].copy()
+    p2_df = df.iloc[split_row_idx:].copy()
     
-    return result_parts if result_parts else [{'title': parent_title, 'df_slice': pd.concat([c['df_slice'] for c in clusters], ignore_index=True), 'components': [item for c in clusters for item in c['components']]}]
+    if p1_df.empty or p2_df.empty: return [item]
+
+    part1 = {
+        'title': f"{item['title']} (Part)",
+        'df_slice': p1_df,
+        'components': [{'title': item['title'], 'text': " ".join(p1_df['text'].astype(str))}]
+    }
+    
+    remaining_item = {
+        'title': item['title'],
+        'df_slice': p2_df,
+        'components': [{'title': item['title'], 'text': " ".join(p2_df['text'].astype(str))}]
+    }
+    
+    return [part1] + _split_text_by_sentence_recursive(remaining_item, min_len, target_len)
 
 def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_font=11):
     if not subsections: return []
-    
-    max_hard_limit = 3000  # Limite massimo assoluto - oltre questo, split aggressivo è quasi obbligatorio
-    
+
+    # 1. Fase di unione
     merged = []
     for item in subsections:
-        if len(" ".join(item['df_slice']['text'].astype(str))) < min_len and merged:
+        content_len = len(" ".join(item['df_slice']['text'].astype(str)))
+        if content_len < min_len and merged:
             prev = merged[-1]
             if not item['title'].endswith('Initial Content'):
                 prev['title'] = f"{prev['title']} / {item['title']}"
             prev['df_slice'] = pd.concat([prev['df_slice'], item['df_slice']], ignore_index=True)
+            if 'components' not in item:
+                item['components'] = [{'title': item['title'], 'text': " ".join(item['df_slice']['text'].astype(str))}]
             prev['components'].extend(item['components'])
         else:
             if 'components' not in item:
-                txt = " ".join(item['df_slice']['text'].astype(str))
-                item['components'] = [{'title': item['title'], 'text': txt}]
+                item['components'] = [{'title': item['title'], 'text': " ".join(item['df_slice']['text'].astype(str))}]
             merged.append(item)
+
+    # 2. Fase di splitting iterativo
     final_list = []
     for item in merged:
         content_str = " ".join(item['df_slice']['text'].astype(str))
+        curr_len = len(content_str)
+
+        if curr_len <= max_len:
+            final_list.append(item)
+            continue
+
+        # Tenta split per titoli
+        internal = cld._cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
         
-        # Se supera il limite massimo assoluto (3000 caratteri), fai split aggressivo usando i titoli
-        if len(content_str) > max_hard_limit:
-            internal_clusters = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
-            if len(internal_clusters) > 1:
-                parts = _split_large_subsection(internal_clusters, item['title'], min_len, max_len)
-                final_list.extend(parts)
-            else:
-                final_list.append(item)
-        # Se è fra max_len (2000) e max_hard_limit (3000), fai split soft usando il punto medio
-        elif len(content_str) > max_len:
-            internal = _cluster_text_elements_by_font(item['df_slice'], median_font, title_multiplier=1.05)
-            if len(internal) > 1:
-                mid = len(content_str) / 2
-                acc, split_idx = 0, 1
-                for i, c in enumerate(internal):
-                    acc += len(" ".join(c['df_slice']['text'].astype(str)))
-                    if acc > mid:
-                        split_idx = max(1, i)
-                        break
-                p1_df = pd.concat([c['df_slice'] for c in internal[:split_idx]], ignore_index=True)
-                p1_comp = []
-                for c in internal[:split_idx]: p1_comp.extend(c['components'])
-                final_list.append({'title': f"{item['title']} (Part 1)", 'df_slice': p1_df, 'components': p1_comp})
-                p2_title = f"{item['title']} / {internal[split_idx]['title']}"
-                p2_df = pd.concat([c['df_slice'] for c in internal[split_idx:]], ignore_index=True)
-                p2_comp = []
-                for c in internal[split_idx:]: p2_comp.extend(c['components'])
-                final_list.append({'title': p2_title, 'df_slice': p2_df, 'components': p2_comp})
-            else: final_list.append(item)
-        else: final_list.append(item)
+        if len(internal) > 1:
+            parts = _split_large_subsection(internal, item['title'], min_len, max_len)
+            for p in parts:
+                p_len = len(" ".join(p['df_slice']['text'].astype(str)))
+                if p_len > 3000:
+                    # Se dopo lo split per titoli è ancora > 3000, applica split per frasi
+                    final_list.extend(_split_text_by_sentence_recursive(p, min_len, max_len))
+                else:
+                    final_list.append(p)
+        else:
+            # Nessun titolo, split diretto per frasi
+            final_list.extend(_split_text_by_sentence_recursive(item, min_len, max_len))
+
     return final_list
+
 
 def process_to_two_levels(text_df, sections_meta, median_font, min_subsection_len=1000):
     main_sections = []
