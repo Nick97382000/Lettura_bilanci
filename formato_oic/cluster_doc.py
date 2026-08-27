@@ -239,6 +239,55 @@ def _split_text_by_sentence_recursive(item, min_len=1000, target_len=2000):
 
     return [part1] + _split_text_by_sentence_recursive(remaining_item, min_len, target_len)
 
+def _split_large_subsection(clusters, parent_title, min_len=1000, max_len=2000):
+    """
+    Divide una sub-section molto grande (> 3000 caratteri) usando i cluster (titoli) come punti di rottura naturali.
+    Tenta di mantenere i risultati nel range min_len-max_len.
+    """
+    result_parts = []
+    current_part_clusters = []
+    current_part_length = 0
+    part_counter = 1
+
+    for cluster in clusters:
+        cluster_len = len(" ".join(cluster['df_slice']['text'].astype(str)))
+
+        # Se aggiungere questo cluster superherebbe max_len, e abbiamo già almeno min_len:
+        if current_part_length + cluster_len > max_len and current_part_length >= min_len and current_part_clusters:
+            # Salva la parte corrente
+            part_title = f"{parent_title} (Part {part_counter})"
+            if current_part_clusters[0].get('title') and not current_part_clusters[0]['title'].startswith('Initial'):
+                part_title = f"{parent_title} / {current_part_clusters[0]['title']}"
+
+            part_df = pd.concat([c['df_slice'] for c in current_part_clusters], ignore_index=True)
+            part_comp = []
+            for c in current_part_clusters:
+                part_comp.extend(c['components'])
+            result_parts.append({'title': part_title, 'df_slice': part_df, 'components': part_comp})
+
+            # Inizia una nuova parte
+            current_part_clusters = [cluster]
+            current_part_length = cluster_len
+            part_counter += 1
+        else:
+            # Aggiungi il cluster alla parte corrente
+            current_part_clusters.append(cluster)
+            current_part_length += cluster_len
+
+    # Aggiungi l'ultima parte
+    if current_part_clusters:
+        part_title = f"{parent_title} (Part {part_counter})"
+        if current_part_clusters[0].get('title') and not current_part_clusters[0]['title'].startswith('Initial'):
+            part_title = f"{parent_title} / {current_part_clusters[0]['title']}"
+
+        part_df = pd.concat([c['df_slice'] for c in current_part_clusters], ignore_index=True)
+        part_comp = []
+        for c in current_part_clusters:
+            part_comp.extend(c['components'])
+        result_parts.append({'title': part_title, 'df_slice': part_df, 'components': part_comp})
+
+    return result_parts if result_parts else [{'title': parent_title, 'df_slice': pd.concat([c['df_slice'] for c in clusters], ignore_index=True), 'components': [item for c in clusters for item in c['components']]}]
+    
 def merge_and_split_subsections(subsections, min_len=1000, max_len=2000, median_font=11):
     if not subsections: return []
 
