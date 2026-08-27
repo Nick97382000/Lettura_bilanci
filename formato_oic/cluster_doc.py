@@ -383,3 +383,57 @@ def display_two_levels(data):
                     comp_len = len(comp.get('text', ''))
                     print(f"      [{i+1}] Title: {comp['title']} (Length: {comp_len})")
                 print("    --------------------------")
+
+
+def apply_garbled_page_filtering(text_df_processed, page_garbled_ratio_threshold=0.70):
+    """
+    Applies page-level filtering for garbled text.
+    If more than `page_garbled_ratio_threshold` of a page is garbled, the entire page is removed.
+    Otherwise, only garbled lines within that page are removed.
+
+    Args:
+        text_df_processed (pd.DataFrame): DataFrame with 'page', 'text', 'is_garbled', 'garbled_text_length' columns.
+        page_garbled_ratio_threshold (float): Threshold for garbled text ratio on a page to remove the entire page.
+
+    Returns:
+        tuple: (filtered_text_df, removed_total_lines, removed_total_chars)
+    """
+    if text_df_processed.empty:
+        return text_df_processed, 0, 0
+
+    # Calculate total original text length per page
+    page_original_lengths = text_df_processed.groupby('page')['text'].apply(lambda x: x.str.len().sum())
+    # Calculate total garbled text length per page
+    page_garbled_lengths = text_df_processed.groupby('page')['garbled_text_length'].sum()
+    # Calculate garbled ratio per page
+    page_garbled_ratio = (page_garbled_lengths / page_original_lengths.replace(0, 1)).fillna(0)
+
+    # Initialize a mask for rows to keep
+    rows_to_keep_mask = pd.Series(True, index=text_df_processed.index)
+
+    removed_total_lines = 0
+    removed_total_chars = 0
+
+    # Iterate over each page to apply filtering logic
+    for page_num in page_original_lengths.index:
+        current_page_df = text_df_processed[text_df_processed['page'] == page_num]
+        initial_page_rows = len(current_page_df)
+
+        if page_garbled_ratio.get(page_num, 0) > page_garbled_ratio_threshold:
+            # Remove entire page
+            rows_to_keep_mask.loc[current_page_df.index] = False
+            removed_total_lines += initial_page_rows
+            removed_total_chars += page_original_lengths[page_num]
+        else:
+            # Remove only garbled lines on this page
+            garbled_lines_on_page_mask = current_page_df['is_garbled']
+            rows_to_keep_mask.loc[garbled_lines_on_page_mask.index[garbled_lines_on_page_mask]] = False
+            removed_lines_on_page = garbled_lines_on_page_mask.sum()
+            if removed_lines_on_page > 0:
+                removed_total_lines += removed_lines_on_page
+                removed_total_chars += page_garbled_lengths[page_num]
+
+    # Apply the mask and remove temporary columns
+    filtered_text_df = text_df_processed[rows_to_keep_mask].drop(columns=['is_garbled', 'garbled_text_length'])
+
+    return filtered_text_df, removed_total_lines, removed_total_chars
