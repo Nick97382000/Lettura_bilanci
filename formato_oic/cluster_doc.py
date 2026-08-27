@@ -437,3 +437,59 @@ def apply_garbled_page_filtering(text_df_processed, page_garbled_ratio_threshold
     filtered_text_df = text_df_processed[rows_to_keep_mask].drop(columns=['is_garbled', 'garbled_text_length'])
 
     return filtered_text_df, removed_total_lines, removed_total_chars
+
+def filter_garbled_text_lines(df, patterns=None, min_alpha_ratio_threshold=0.1):
+    """
+    Identifies and marks 'garbled' text lines in a DataFrame based on regex patterns
+    or a low proportion of alphabetic characters. It also calculates the length of
+    the *original* text for lines marked as garbled.
+
+    Args:
+        df (pd.DataFrame): The DataFrame containing 'page' and 'text' columns.
+        patterns (list): A list of regular expressions to identify 'garbled' text.
+                         If None, uses a predefined pattern set.
+        min_alpha_ratio_threshold (float): The minimum proportion of alphabetic characters
+                                         a line must have to not be considered 'garbled'.
+
+    Returns:
+        pd.DataFrame: The DataFrame with an added 'is_garbled' boolean column and 'garbled_text_length' column.
+                      'garbled_text_length' will be the length of the original text if 'is_garbled' is True,
+                      otherwise 0.
+    """
+    if df.empty:
+        df_copy = df.copy()
+        df_copy['is_garbled'] = False
+        df_copy['garbled_text_length'] = 0
+        return df_copy
+
+    df_copy = df.copy()
+    df_copy['text'] = df_copy['text'].astype(str)
+
+    df_copy['is_garbled'] = False
+
+    # Patterns from the earlier, more aggressive version
+    if patterns is None:
+        patterns = [
+            r'^[#\s/%0-9@\.\,\-]+$', # Re-introducing the aggressive numeric/symbol only pattern
+            r'^(?:[^\w\s]*[^\w\s]){5,}', # Matches lines with at least 5 non-alphanumeric characters (excluding spaces)
+            r'^[^À-ſ\w\s]{10,}$', # Matches lines composed of 10 or more non-alphanumeric non-whitespace characters (including accented chars)
+            r'^[_—–—]+$', # Matches lines with only underscores or hyphens (including unicode dashes)
+            r"""^[[\\](){}<>\*#%&@^\\|/=+~`.,:;!?'"$£€`•]*$""", # Matches lines containing only common symbols, bullet points
+        ]
+
+    for pattern in patterns:
+        df_copy.loc[df_copy['text'].str.match(pattern, na=False, flags=re.IGNORECASE), 'is_garbled'] = True
+
+    # Calculate alphabetic ratio
+    alpha_counts = df_copy['text'].str.count(r'[a-zA-ZÀ-ſ]')
+    text_lengths_stripped = df_copy['text'].str.strip().str.len()
+    alpha_ratios = alpha_counts / text_lengths_stripped.replace(0, 1)
+
+    # Mark as garbled if alpha ratio is low and the line is not extremely short (to avoid marking valid short titles)
+    df_copy.loc[(alpha_ratios < min_alpha_ratio_threshold) & (text_lengths_stripped > 10), 'is_garbled'] = True
+
+    # Calculate the length of the original text for lines marked as garbled
+    df_copy['garbled_text_length'] = df_copy['text'].str.len() # Get original length
+    df_copy.loc[~df_copy['is_garbled'], 'garbled_text_length'] = 0 # Set to 0 if not garbled
+
+    return df_copy
